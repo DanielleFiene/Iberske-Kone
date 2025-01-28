@@ -265,35 +265,142 @@ button {
   border-radius: 5px;
   font-weight: bold;
   color: var(--first-color);
-
+  text-decoration: underline;
 }
 
 /* ================Hero Section Styles==================== */
 .hero {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    background-image: url('../images/hero3.jpeg');
-    background-size: cover;
-    background-position: 50% 30%;; 
-    background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url('../images/hero3.jpeg');
+  background-size: cover;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
 }
 
 .hero__content {
-    position: absolute;
-    top: 5%;
-    left: 1%; 
-    text-align: left;
-    color: var(--first-color-lighten); 
-    z-index: 2;
+  position: absolute;
+  top: 5%;
+  left: 1%; 
+  text-align: left;
+  color: var(--first-color-lighten); 
+  z-index: 2;
+  display: flex;             /* Change to flex */
+  flex-direction: column;    /* Stack the titles vertically */
+
+  max-width: 250px;
 }
 
 .hero__title {
-    color: var(--first-color-lighten);
+  color: var(--first-color-lighten);
+  cursor: pointer;
+  border: 1px solid;
+  border-color: var(--first-color-lighten);
+  padding: 10px 20px;  /* Adds some space around the text */
+  border-radius: 5px;  /* Rounded corners for a button-like feel */
+  font-weight: bold;    /* Make the text bolder */
+  color: white;         /* Ensures text is white for contrast */
+  display: inline-block; /* Keeps it as a block element */
+  background: #000000;   /* Initial background color */
+  position: relative;     /* Needed for the pseudo-element */
+  z-index: 1;             /* Ensures button content stays on top of the gradient */
+  transition: background 0.3s ease; /* Optional: for smooth non-gradient background changes */
 }
+
+.hero__title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, #060 40%, #ff0000 0); /* Default gradient for Portuguese button */
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.5s ease; /* Smooth opacity transition */
+  z-index: -1; /* Ensure the gradient is behind the button text */
+}
+
+.button-portuguese:hover::before {
+  opacity: 1; /* Make the gradient visible on hover */
+}
+
+.button-portuguese {
+  background: #000000; /* Set initial background color to black */
+}
+
+.button-spanish {
+  background: #000000; /* Set initial background color to black */
+}
+
+.button-spanish::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, #ad1519 25%, #fabd00 25.1%, #fabd00 75%, #ad1519 75.1%); /* Spanish flag gradient */
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.5s ease; /* Smooth opacity transition */
+  z-index: -1; /* Ensure the gradient is behind the button text */
+}
+
+.button-spanish:hover::before {
+  opacity: 1; /* Make the gradient visible on hover */
+}
+
+/* Base styles for the button */
+.button-cruzado {
+  font-size: 3em;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Prevent particles from overflowing the button */
+}
+
+.button-cruzado:hover {
+  background-color: #2f4f4f;
+}
+
+/* Firework particles - initially hidden */
+.button-cruzado .particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff6347; /* Default color */
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction with particles */
+  animation: fireworkEffect 1s forwards;
+}
+
+/* Firework animation: particles move in random directions */
+@keyframes fireworkEffect {
+  0% {
+    transform: scale(0) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(var(--scale)) translate(var(--x), var(--y)); /* move along X and Y axis */
+    opacity: 0;
+  }
+}
+
+
+
+
+/* On hover, trigger the animation */
+.button-cruzado:hover .particle {
+  animation: fireworkEffect 1s forwards;
+}
+
+
 .hero h1 {
-    font-size: var(--h1-font-size);
-    font-weight: var(--font-semi-bold);
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
 }
 
 .hero p {
