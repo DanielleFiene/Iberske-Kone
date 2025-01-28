@@ -1,0 +1,608 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+
+    --first-color: hsl(30, 40%, 50%); 
+    --first-color-alt: hsl(30, 30%, 40%); 
+    --first-color-light: hsl(30, 50%, 70%); 
+    --first-color-lighten: hsl(30, 80%, 95%); 
+    
+
+    --second-color: hsl(100, 35%, 50%); 
+
+    --title-color: hsl(30, 30%, 25%);
+    --text-color: hsl(30, 20%, 40%); 
+    --text-color-light: hsl(30, 30%, 60%); 
+
+    --border-color: hsl(40, 50%, 85%); 
+    --body-color: hsl(40, 20%, 99%);
+    --container-color: hsl(40, 30%, 92%);
+  
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Nunito', sans-serif;
+    --heading-font: 'Quicksand', sans-serif;
+/*========== Base font size ==========*/
+    --biggest-font-size: 2.25rem; 
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /*========== z-index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  /*========== Mobile First - Small devices ==========*/
+  @media screen and (max-width: 600px) {
+    :root {
+      --biggest-font-size: 1.75rem;
+      --h1-font-size: 1.25rem;
+      --h2-font-size: 1.125rem;
+      --h3-font-size: 1rem;
+      --normal-font-size: .875rem;
+      --small-font-size: .75rem;
+      --smaller-font-size: .6875rem;
+    }
+  }
+  
+  /*========== Tablets - Medium devices ==========*/
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    :root {
+      --biggest-font-size: 2.25rem; 
+      --h1-font-size: 1.75rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.125rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .75rem;
+    }
+  }
+  
+  /*========== Desktop - Large devices ==========*/
+  @media screen and (min-width: 1024px) {
+    :root {
+      --biggest-font-size: 4rem; 
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.75rem;
+      --h3-font-size: 1.5rem;
+      --normal-font-size: 1.125rem;
+      --small-font-size: 1rem;
+      --smaller-font-size: .875rem;
+    }
+  }
+  
+  /*========== Applying font sizes in styles ==========*/
+  h1 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+  }
+  
+  h2 {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+  }
+  
+  h3 {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+  }
+  
+  p {
+    font-size: var(--normal-font-size);
+  }
+  
+  small {
+    font-size: var(--small-font-size);
+  }
+  
+  
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-family: var(--heading-font);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: .3s;
+  color: var(--first-color);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--first-color-alt);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  font-family: var(--body-font);
+  outline: none;
+  border: none;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 1rem;
+}
+
+.section__title span {
+  color: var(--second-color);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--second-color);
+}
+
+
+/*=============== HEADER & NAV ===============*/
+/* Navbar container */
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+/* Container for logo and text on the left */
+.nav__left {
+    display: flex;
+    align-items: center; /* Centers the logo vertically */
+}
+
+/* Styling for logo */
+.nav__logo .logo {
+    width:40px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.nav__center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__text {
+    font-size: var(--h3-font-size);
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Styling for the navigation menu */
+.nav__menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the nav list */
+.nav__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Styling for nav items */
+.nav__item {
+    margin-left: 20px;
+}
+
+/* Styling for nav links */
+.nav__link {
+    text-decoration: none;
+    font-size: var(--h3-font-size);
+    font-weight: bold;
+    color: var(--first-color-alt);
+}
+
+
+/* Active link */
+.nav__link.active-link {
+  border-radius: 5px;
+  font-weight: bold;
+  color: var(--first-color);
+
+}
+
+/* ================Hero Section Styles==================== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url('../images/hero3.jpeg');
+    background-size: cover;
+    background-position: 50% 30%;; 
+    background-repeat: no-repeat;
+}
+
+.hero__content {
+    position: absolute;
+    top: 5%;
+    left: 1%; 
+    text-align: left;
+    color: var(--first-color-lighten); 
+    z-index: 2;
+}
+
+.hero__title {
+    color: var(--first-color-lighten);
+}
+.hero h1 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.hero p {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    margin-top: 1rem;
+}
+
+
+/* ===================== Sidebar Style (Flex Row) ===================== */
+.sidebar {
+  margin: 0 auto;
+  width: 80%;
+  background-color: var(--container-color);
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 20px;
+  height: 100%;
+}
+
+/* Title for sidebar */
+.sidebar__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  margin: 0;
+  text-align: center;
+}
+
+/* ===================== Labels and Fields Row ===================== */
+/* ===================== Sidebar Style (Flex Row) ===================== */
+.sidebar {
+  margin: 0 auto;
+  width: 80%;
+  background-color: var(--container-color);
+  padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row; /* Items in a row */
+  justify-content: space-between; /* Evenly distribute items across the row */
+  gap: 20px; /* Space between each item */
+  height: 100%;
+}
+
+/* Title for sidebar 
+.sidebar__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  margin: 0;
+}*/
+
+/* ===================== Labels and Fields Row ===================== */
+.filter {
+  display: flex;
+  flex-direction: column; /* Stack label and select vertically */
+  gap: 5px; /* Space between label and select */
+  flex-grow: 1; /* Allow filters to take up available space */
+  max-width: 180px; /* Limit max width of each filter */
+  flex-basis: 0; /* Make sure items are evenly distributed */
+  font-weight: var(--font-semi-bold);
+}
+
+/* Styling for select input fields */
+.filter select {
+  padding: 8px;
+  font-size: var(--normal-font-size);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  min-width: 100%; /* Ensure dropdown fields take full width of filter container */
+}
+
+/* ===================== Search button Style ===================== */
+.search-button {
+  padding: 30px 30px; /* Adjust padding for the button */
+  font-size: var(--normal-font-size);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--first-color); 
+  color: white;
+  cursor: pointer;
+  min-width: 100px; /* Make button width consistent with filters */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  font-weight: var(--font-semi-bold);
+}
+
+/* Hover effect for search button */
+.search-button:hover {
+  background-color: var(--first-color-alt);
+}
+
+
+
+
+
+/* =====horse cards ==============*/
+.horse-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 30px;
+    padding: 20px;
+    width: 85%;
+    margin: 0 auto;
+}
+.horse-card {
+    background-color: var(--container-color);
+    border-radius: 8px;
+    border: 2px solid;
+    border-color: var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.horse-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.horse-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.horse-card img:hover {
+    transform: scale(1.05);
+}
+
+.horse-card__details {
+    padding: 30px;
+}
+
+.horse-card h3 {
+    font-size: var(--h3-font-size);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.horse-card p {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    margin: 0 auto;
+    margin-left: 10%;
+}
+
+
+/* Responsive aanpassingen voor kleinere schermen */
+@media (max-width: 1024px) {
+    .horse-cards {
+        grid-template-columns: 1fr 1fr; /* 2 kolommen op tablet-scherm */
+    }
+}
+
+@media (max-width: 600px) {
+    .horse-cards {
+        grid-template-columns: 1fr; /* 1 kolom op mobiele apparaten */
+    }
+}
+
+/* ===================== Responsive design ======================== */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 100%; /* Zorg ervoor dat de sidebar de volledige breedte krijgt op kleinere schermen */
+    }
+
+    .horse-cards {
+        grid-template-columns: 1fr 1fr; /* Maak twee kolommen op kleinere schermen */
+    }
+}
+
+@media (max-width: 768px) {
+    .horse-cards {
+        grid-template-columns: 1fr; /* Maak de kaarten onder elkaar op nog kleinere schermen */
+    }
+}
+
+
+/* ==========new cards without sidebar============ */
+.horse-cards-no-sidebar {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Responsive small screens */
+@media (max-width: 1024px) {
+    .horse-cards-no-sidebar {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media (max-width: 600px) {
+    .horse-cards-no-sidebar {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*=============== CONTACT ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+.footer {
+    padding: 30px 20px;
+    margin-top: auto;
+}
+
+.footer p {
+    font-size: var(--smaller-font-size);
+}
+
+.footer__info {
+    display: flex; /* Makes the container a flexbox */
+    justify-content: space-between; /* Ensures the divs are spaced evenly */
+    flex-wrap: wrap; /* Allows content to wrap if needed */
+    font-size: var(--smaller-font-size);
+}
+
+.footer__left,
+.footer__right {
+    padding: 10px;
+}
+
+.footer__left {
+    display: flex;
+    flex-direction: column; /* Stacks the copyright and contact vertically */
+    gap: 10px;
+}
+
+.footer__copy {
+    margin-bottom: 10px; /* Adds some space between copyright and contact details */
+}
+
+.footer__copy a {
+    margin-top: 5px; /* Adds some space between the links */
+}
+
+.footer__right {
+    display: flex;
+    flex-direction: column; /* Stacks company details vertically */ 
+    gap: 10px;
+}
+
+.footer__copy a {
+    margin: 0 0 5px 0; /* Adds some margin to space out the links */
+}
+
+/* Style for the links */
+.footer__copy a {
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer__copy a:hover {
+    text-decoration: underline;
+}
+
+/* Media query for screens less than 550px */
+@media (max-width: 550px) {
+    .footer__info {
+        flex-direction: column; /* Stack the footer elements vertically */
+        align-items: center; /* Centers the items horizontally */
+        justify-content: center; /* Aligns items with space in the center */
+    }
+
+    .footer__left,
+    .footer__right {
+        flex: none; /* Prevent them from stretching */
+        width: 100%; /* Ensure each takes full width */
+        text-align: center; /* Centers text inside the divs */
+    }
+
+    .footer__left {
+        margin-bottom: 15px; /* Adds spacing between left and center sections */
+    }
+}
+
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: var(--first-color-lighten);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--first-color);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--first-color-alt);
+  border-radius: .5rem;
+}
+

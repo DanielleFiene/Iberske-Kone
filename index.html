@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Danielle Fiene">
+    <meta name="description" content="Iberská koně na prodej">
+    <meta name="keywords" content="Lusitano, PRE, Pura Raza Espanola, Cartujano, PSL, ANCCE, APSL, Cruzado">
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+    <link rel="manifest" href="./resources/Images/site.webmanifest">
+    <link href="./resources/CSS/normalize.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./resources/CSS/style.css" type="text/css">
+    <title>IberskeKone.cz | Koně ze Španělska</title>
+</head>
+
+<body> 
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <!-- Left: Logo -->
+            <div class="nav__left">
+            </div>
+    
+            <!-- Center: Navigation Menu -->
+            <div class="nav__center">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#domů" class="nav__link">
+                            <span>Domů</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#přístup" class="nav__link">
+                            <span>Přístup</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#doprava" class="nav__link">
+                            <span>Doprava</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#kontakt" class="nav__link">
+                            <span>Kontakt</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#podmínky" class="nav__link">
+                            <span>Podmínky</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Right: "" -->
+            <div class="nav__right">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__content container">
+            <h1 class="hero__title">Lusitano</h1>
+            <h1 class="hero__title">PRE</h1>
+            <h1 class="hero__title">Cruzado</h1>
+        </div>
+    </section>
+
+    <!-- Main content container for sidebar and horse cards -->
+    <div class="">
+
+
+<!-- Sidebar Section (filters) -->
+<aside class="sidebar">
+    <!-- Filter Section (Row of Filters) -->
+    <!-- Filter 1: Plemeno -->
+    <div class="filter">
+        <label for="breed">Plemeno:</label>
+        <select id="breed" name="breed">
+            <option value="all">Všichni</option>
+            <option value="Lusitano">Lusitano</option>
+            <option value="PRE">PRE</option>
+            <option value="Cruzado">Cruzado / Kříženec</option>
+        </select>
+    </div>
+
+    <!-- Filter 2: Pohlaví -->
+    <div class="filter">
+        <label for="gender">Pohlaví:</label>
+        <select id="gender" name="gender">
+            <option value="all">Všichni</option>
+            <option value="Kobyla">Kobyla</option>
+            <option value="Hřebec">Hřebec</option>
+            <option value="Valach">Valach</option>
+        </select>
+    </div>
+
+    <!-- Filter 3: Barva -->
+<div class="filter">
+    <label for="color">Barva:</label>
+    <select id="color" name="color">
+        <option value="all">Všichni</option>
+        <option value="Bělouš">Bělouš</option>
+        <option value="Hnědák">Hnědák</option>
+        <option value="Ryzák">Ryzák</option>
+        <option value="Vraník">Vraník</option>
+        <option value="Plavák">Plavák</option>
+        <option value="Palomino">Palomino</option>
+        <option value="Cremello">Cremello</option>
+        <option value="Perlino">Perlino</option>
+    </select>
+</div>
+
+    <!-- Filter 4: Věk -->
+    <div class="filter">
+        <label for="age">Věk:</label>
+        <select id="age" name="age">
+            <option value="all">Všichni</option>
+            <option value="0-1 rok">0-1 rok</option>
+            <option value="1-3 roky">1-3 roky</option>
+            <option value="3-7 let">3-7 let</option>
+            <option value="7-10 let">7-10 let</option>
+            <option value="10-15 let">10-15 let</option>
+            <option value="15+ let">15+ let</option>
+        </select>
+    </div>
+
+    <!-- Filter 5: Vhodný pro -->
+    <div class="filter">
+        <label for="discipline">Vhodný pro:</label>
+        <select id="discipline" name="discipline">
+            <option value="all">Všichno</option>
+            <option value="Drezuru">Drezuru</option>
+            <option value="Working Equitation">Working Equitation</option>
+            <option value="Rekreační ježdění">Rekreační ježdění</option>
+        </select>
+    </div>
+
+    <!-- Filter 6: Výška -->
+    <div class="filter">
+        <label for="size">Výška:</label>
+        <select id="size" name="size">
+            <option value="all">Všichni</option>
+            <option value="below-160">&lt; 1.60</option>
+            <option value="160-170">160-1.70</option>
+            <option value="above-170">&gt;1.70</option>
+        </select>
+    </div>
+
+<!-- Filter 7: Cena -->
+<div class="filter">
+    <label for="price">Cena:</label>
+    <select id="price" name="price">
+        <option value="all">Všichni</option>
+        <option value="below-5000">&lt; 5 000 EUR</option>
+        <option value="5000-10000">5 000 EUR - 10 000 EUR</option>
+        <option value="10000-15000">10 000 EUR - 15 000 EUR</option>
+        <option value="15000-25000">15 000 EUR - 25 000 EUR</option>
+        <option value="above-25000">&gt; 25 000 EUR</option>
+        <option value="on-request">Na dotaz</option>
+    </select>
+</div>
+
+
+        <!-- Filter 8: uchovneni -->
+        <div class="filter">
+            <label for="approved">Uchovnění:</label>
+            <select id="approved" name="approved">
+                <option value="all">Všichni</option>
+                <option value="ano">Ano</option>
+                <option value="ne">Ne</option>
+            </select>
+        </div>
+
+    <!-- Search Section -->
+    <div class="filter">
+        <button class="search-button">Hledat</button>
+    </div>
+</aside>
+
+
+
+<!-- Horse cards Section -->
+<section class="horse-cards" id="horse-cards">
+    <!-- Dynamic Horse Cards will be injected here -->
+  </section>
+
+    <!-- Footer Section -->
+    <footer class="footer section">
+        <div class="footer__info container">
+            <div class="footer__left">
+                <span class="footer__copy">
+                    Všechna práva vyhrazena <i class="fa-regular fa-copyright"></i> Iberske Kone 2025
+                </span>
+                <a href="mailto:info@iberskekone.cz">info@iberskekone.cz</a>
+                <a href="tel:+420601387904">+420 601 387 904</a>
+            </div>
+
+            <div class="footer__right">
+                <span class="footer__company">Podrobnosti o společnosti:</span>
+                <p>2. Brabant CZ, spol s.r.o.</p>
+                <p>Company ID: 12345678</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="./resources/JS/horses.js"></script>
+
+</body>
+
+</html>
