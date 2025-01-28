@@ -1,18 +1,22 @@
 [
     {
+        "id": 1,
         "name": "Orador do Luar",
         "breed": "Lusitano",
         "gender": "Hřebec",
         "color": "Bělouš",
-        "age": 6,
+        "age": 7,
         "discipline": ["Drezuru", "Working Equitation"],
         "size": 170,
         "price": 20000,
         "x-rays": true,
         "approvedForBreeding": false,
-        "image": "./resources/images/Orador1.jpg"
+        "image":"./resources/images/Orador1.jpg",
+        "character": "Klidný a soustředěný, Orador do Luar je spolehlivý a vyrovnaný kůň s vynikajícím pracovním nasazením.",
+        "ridingLevel": "Pokročilý"
     },
     {
+        "id": 2,
         "name": "Embasador",
         "breed": "PRE",
         "gender": "Valach",
@@ -23,9 +27,12 @@
         "price": 15000,
         "x-rays": true,
         "approvedForBreeding": true,
-        "image": "./resources/images/hero2.jpg"
+        "image": "./resources/images/hero2.jpg",
+        "character": "Embasador je jemný kůň s vynikajícím temperamentem, ideální pro výcvik mladých jezdců.",
+        "ridingLevel": "Středně pokročilý"
     },
     {
+        "id": 3,
         "name": "Flurry",
         "breed": "Cruzado",
         "gender": "Kobyla",
@@ -36,22 +43,28 @@
         "price": 8500,
         "x-rays": false,
         "approvedForBreeding": false,
-        "image": "./resources/images/hero3.jpeg"
+        "image": "./resources/images/hero3.jpeg",
+        "character": "Flurry je energická a hravá, ideální pro rekreační ježdění a méně zkušené jezdce.",
+        "ridingLevel": "Začátečník"
     },
     {
+        "id": 4,
         "name": "Queluz do Luar",
         "breed": "Lusitano",
         "gender": "Hřebec",
         "color": "Palomino",
-        "age": 6,
+        "age": 5,
         "discipline": ["Drezuru"],
         "size": 168,
-        "price": 14000,
+        "price": 150000,
         "x-rays": true,
         "approvedForBreeding": true,
-        "image": "./resources/images/Queluz.jpg"
+        "image": "./resources/images/Queluz.jpg",
+        "character": "Queluz je sebevědomý a vyrovnaný, vyniká v drezúře s precizností a elegancí.",
+        "ridingLevel": "Pokročilý"
     },
     {
+        "id": 5,
         "name": "Virrey Mor",
         "breed": "PRE",
         "gender": "Hřebec",
@@ -62,9 +75,12 @@
         "price": "Na dotaz",
         "x-rays": true,
         "approvedForBreeding": true,
-        "image": "./resources/images/hero4 virrey mor.jpg"
+        "image": "./resources/images/hero4 virrey mor.jpg",
+        "character": "Virrey Mor je asertivní, ale přístupný, nabízí dobré univerzální schopnosti pro různé disciplíny.",
+        "ridingLevel": "Středně pokročilý"
     },
     {
+        "id": 6,
         "name": "Cubero",
         "breed": "PRE",
         "gender": "Hřebec",
@@ -75,22 +91,28 @@
         "price": 16000,
         "x-rays": true,
         "approvedForBreeding": false,
-        "image": "./resources/images/Schimmel 1.jpg"
+        "image": "./resources/images/Schimmel 1.jpg",
+        "character": "Cubero je přátelský a uvolněný, skvělý společník pro méně náročné ježdění.",
+        "ridingLevel": "Začátečník"
     },
     {
+        "id": 7,
         "name": "Hosco A",
         "breed": "PRE",
         "gender": "Hřebec",
         "color": "Palomino",
-        "age": 6,
+        "age": 12,
         "discipline": ["Drezuru", "Working Equitation"],
         "size": 162,
-        "price": 14000,
+        "price": 25000,
         "x-rays": false,
         "approvedForBreeding": true,
-        "image": "./resources/images/palomino.jpg"
+        "image": "./resources/images/HoscoA.jpg",
+        "character": "Hosco A je citlivý a obratný, vyniká jak v drezúře, tak v pracovní equitaci.",
+        "ridingLevel": "Pokročilý"
     },
     {
+        "id": 8,
         "name": "Tordita",
         "breed": "PRE",
         "gender": "Kobyla",
@@ -101,35 +123,44 @@
         "price": 9500,
         "x-rays": true,
         "approvedForBreeding": false,
-        "image": "./resources/images/schimmel2.jpg"
+        "image": "./resources/images/schimmel2.jpg",
+        "character": "Tordita je poslušná a ochotná se učit, ideální pro výcvik v pracovní equitaci.",
+        "ridingLevel": "Středně pokročilý"
     },
     {
+        "id": 9,
         "name": "Paquirri",
         "breed": "Lusitano",
         "gender": "Valach",
         "color": "Hnědák",
-        "age": 5,
+        "age": 6,
         "discipline": ["Working Equitation"],
         "size": 156,
         "price": 9500,
         "x-rays": true,
         "approvedForBreeding": false,
-        "image": "./resources/images/Paquirri.png"
+        "image": "./resources/images/Paquirri.png",
+        "character": "Paquirri je nadšený a má silnou pracovní morálku, ideální pro závodníky.",
+        "ridingLevel": "Pokročilý"
     },
     {
+        "id": 10,
         "name": "Larapio",
         "breed": "Lusitano",
         "gender": "Hřebec",
         "color": "Bělouš",
-        "age": 8,
+        "age": 10,
         "discipline": ["Drezuru"],
         "size": 165,
         "price": "Na dotaz",
         "x-rays": true,
         "approvedForBreeding": true,
-        "image": "./resources/images/Larapio.png"
+        "image": "./resources/images/Larapio1.png",
+        "character": "Larapio je vyrovnaný a silný kůň, ukazující výjimečnou preciznost v drezúře.",
+        "ridingLevel": "Pokročilý"
     },
     {
+        "id": 11,
         "name": "Farruco",
         "breed": "PRE",
         "gender": "Valach",
@@ -140,9 +171,12 @@
         "price": 20500,
         "x-rays": true,
         "approvedForBreeding": false,
-        "image": "./resources/images/Farruco.jpg"
+        "image": "./resources/images/Farruco.jpg",
+        "character": "Farruco je zkušený a stabilní, spolehlivá volba pro pokročilé jezdce hledající konzistenci.",
+        "ridingLevel": "Expert"
     },
     {
+        "id": 12,
         "name": "Divino",
         "breed": "Lusitano",
         "gender": "Valach",
@@ -153,6 +187,8 @@
         "price": "Na dotaz",
         "x-rays": true,
         "approvedForBreeding": true,
-        "image": "./resources/images/Divino.jpg"
+        "image": "./resources/images/Divino.jpg",
+        "character": "Divino je zkušený a přizpůsobivý, vyniká v pracovní equitaci s horkým chováním.",
+        "ridingLevel": "Expert"
     }
 ]

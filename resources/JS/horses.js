@@ -52,7 +52,7 @@ function renderHorseCards(horses) {
     horseSize.innerHTML = `<span style="font-weight: 900">Výška:</span> ${horse.size}`;
 
     const horsePrice = document.createElement('p');
-    horsePrice.innerHTML = `<span style="font-weight: 900">Cena:</span> ${horse.price}`;
+    horsePrice.innerHTML = `<span style="font-weight: 900">Cena:</span> ${horse.price} €`;
 
     // approved for breeding indicator
     const horseApproved = document.createElement('p');
@@ -85,8 +85,16 @@ function renderHorseCards(horses) {
     horseDetails.appendChild(horsePrice);
 
 
-    horseCard.appendChild(horseImage);
-    horseCard.appendChild(horseDetails);
+    // Wrap the horse card in a link element
+    const horseLink = document.createElement('a');
+    horseLink.href = `horse-details.html?id=${horse.id}`;
+    horseLink.target = '_blank';
+    horseLink.classList.add('no-underline');
+    horseLink.appendChild(horseImage);
+    horseLink.appendChild(horseDetails);
+
+    // Append the link to the card container
+    horseCard.appendChild(horseLink);
 
     // Append the horse card to the container
     horseCardsContainer.appendChild(horseCard);

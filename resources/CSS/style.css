@@ -547,6 +547,10 @@ button {
     padding: 30px;
 }
 
+.no-underline:hover {
+  text-decoration: none;
+}
+
 .horse-card h3 {
     font-size: var(--h3-font-size);
     margin-bottom: 10px;
@@ -614,6 +618,59 @@ button {
         grid-template-columns: 1fr;
     }
 }
+
+/*===================================== Horse Details Section ====================================*/
+.horse-details {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  display: flex; /* Use flexbox for horizontal layout */
+  gap: 20px; /* Add space between image and text */
+  align-items: flex-start; /* Align items to the top */
+  justify-content: center;
+}
+
+/* Image section */
+.horse-details__image img {
+  width: 100%; /* Make the image take up full width */
+  max-width: 1100px; /* Make the image even bigger */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* Ensure image is cropped correctly */
+  margin-right: 20px; /* Space between image and details */
+}
+
+#horse-name {
+  margin-bottom: 30px;
+}
+
+/* Info section */
+.horse-details__info {
+  flex: 1;
+  min-width: 300px; /* Keep the info section from shrinking too much */
+  max-width: 600px; /* Limit width of the info section */
+}
+
+.horse-details__info p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.horse-details__info p strong {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Price and Breeding Info */
+.horse-details__info span {
+  color: #555;
+  font-weight: normal;
+}
+
+
 
 /*=============== CONTACT ===============*/
 
