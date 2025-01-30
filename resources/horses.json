@@ -12,8 +12,14 @@
         "x-rays": true,
         "approvedForBreeding": false,
         "image":"./resources/images/Orador1.jpg",
+        "slideshow": [
+            "./resources/images/Orador1.jpg",
+            "./resources/images/Orador2.PNG"
+          ],
         "character": "Klidný a soustředěný, Orador do Luar je spolehlivý a vyrovnaný kůň s vynikajícím pracovním nasazením.",
-        "ridingLevel": "Pokročilý"
+        "ridingLevel": "Pokročilý",
+        "genealogyPdf": "./resources/stambomen/APSL_Orador.pdf",
+        "video": ""
     },
     {
         "id": 2,
@@ -28,8 +34,13 @@
         "x-rays": true,
         "approvedForBreeding": true,
         "image": "./resources/images/hero2.jpg",
+        "slideshow": [
+            "./resources/images/hero2.jpg"
+          ],
         "character": "Embasador je jemný kůň s vynikajícím temperamentem, ideální pro výcvik mladých jezdců.",
-        "ridingLevel": "Středně pokročilý"
+        "ridingLevel": "Středně pokročilý",
+        "genealogyPdf": "",
+        "video": ""
     },
     {
         "id": 3,
@@ -44,8 +55,13 @@
         "x-rays": false,
         "approvedForBreeding": false,
         "image": "./resources/images/hero3.jpeg",
+        "slideshow": [
+            "./resources/images/hero3.jpeg"
+          ],
         "character": "Flurry je energická a hravá, ideální pro rekreační ježdění a méně zkušené jezdce.",
-        "ridingLevel": "Začátečník"
+        "ridingLevel": "Začátečník",
+        "genealogyPdf": "",
+        "video": ""
     },
     {
         "id": 4,
@@ -60,8 +76,13 @@
         "x-rays": true,
         "approvedForBreeding": true,
         "image": "./resources/images/Queluz.jpg",
+        "slideshow": [
+            "./resources/images/Queluz.jpg"
+          ],
         "character": "Queluz je sebevědomý a vyrovnaný, vyniká v drezúře s precizností a elegancí.",
-        "ridingLevel": "Pokročilý"
+        "ridingLevel": "Pokročilý",
+        "genealogyPdf": "",
+        "video": ""
     },
     {
         "id": 5,
@@ -76,8 +97,13 @@
         "x-rays": true,
         "approvedForBreeding": true,
         "image": "./resources/images/hero4 virrey mor.jpg",
+        "slideshow": [
+            "./resources/images/hero4 virrey mor.jpg"
+          ],
         "character": "Virrey Mor je asertivní, ale přístupný, nabízí dobré univerzální schopnosti pro různé disciplíny.",
-        "ridingLevel": "Středně pokročilý"
+        "ridingLevel": "Středně pokročilý",
+        "genealogyPdf": "./resources/stambomen/ANCCE_VirreyMor.pdf",
+        "video": ""
     },
     {
         "id": 6,
@@ -92,8 +118,13 @@
         "x-rays": true,
         "approvedForBreeding": false,
         "image": "./resources/images/Schimmel 1.jpg",
+        "slideshow": [
+            "./resources/images/Schimmel 1.jpg"
+          ],
         "character": "Cubero je přátelský a uvolněný, skvělý společník pro méně náročné ježdění.",
-        "ridingLevel": "Začátečník"
+        "ridingLevel": "Začátečník",
+        "genealogyPdf": "./resources/stambomen/ANCCE_Cubero.pdf",
+        "video": ""
     },
     {
         "id": 7,
@@ -108,8 +139,13 @@
         "x-rays": false,
         "approvedForBreeding": true,
         "image": "./resources/images/HoscoA.jpg",
-        "character": "Hosco A je citlivý a obratný, vyniká jak v drezúře, tak v pracovní equitaci.",
-        "ridingLevel": "Pokročilý"
+        "slideshow": [
+            "./resources/images/HoscoA.jpg"
+          ],
+        "character": "Hosco A je citlivý a obratný, vyniká jak v drezúře, tak v WE.",
+        "ridingLevel": "Pokročilý",
+        "genealogyPdf": "./resources/stambomen/ANCCE_HoscoA",
+        "video": ""
     },
     {
         "id": 8,
@@ -123,9 +159,16 @@
         "price": 9500,
         "x-rays": true,
         "approvedForBreeding": false,
-        "image": "./resources/images/schimmel2.jpg",
-        "character": "Tordita je poslušná a ochotná se učit, ideální pro výcvik v pracovní equitaci.",
-        "ridingLevel": "Středně pokročilý"
+        "image": "./resources/images/Tordita1.jpg",
+        "slideshow": [
+            "./resources/images/Tordita1.jpg",
+            "./resources/images/Tordita2.jpg",
+            "./resources/images/Tordita3.jpg"
+          ],
+        "character": "Tordita je poslušná a ochotná se učit, ideální pro výcvik v WE.",
+        "ridingLevel": "Středně pokročilý",
+        "genealogyPdf": "",
+        "video": ""
     },
     {
         "id": 9,
@@ -140,8 +183,13 @@
         "x-rays": true,
         "approvedForBreeding": false,
         "image": "./resources/images/Paquirri.png",
+        "slideshow": [
+            "./resources/images/Paquirri.png"
+          ],
         "character": "Paquirri je nadšený a má silnou pracovní morálku, ideální pro závodníky.",
-        "ridingLevel": "Pokročilý"
+        "ridingLevel": "Pokročilý",
+        "genealogyPdf": "./resources/stambomen/APSL_Paquirri.pdf",
+        "video": ""
     },
     {
         "id": 10,
@@ -156,12 +204,19 @@
         "x-rays": true,
         "approvedForBreeding": true,
         "image": "./resources/images/Larapio1.png",
+        "slideshow": [
+            "./resources/images/Larapio1.png",
+            "./resources/images/Larapio2.jpg",
+            "./resources/images/Larapio3.jpg"
+          ],
         "character": "Larapio je vyrovnaný a silný kůň, ukazující výjimečnou preciznost v drezúře.",
-        "ridingLevel": "Pokročilý"
+        "ridingLevel": "Pokročilý",
+        "genealogyPdf": "",
+        "video": ""
     },
     {
         "id": 11,
-        "name": "Farruco",
+        "name": "Farruco XCVII",
         "breed": "PRE",
         "gender": "Valach",
         "color": "Hnědák",
@@ -172,8 +227,13 @@
         "x-rays": true,
         "approvedForBreeding": false,
         "image": "./resources/images/Farruco.jpg",
+        "slideshow": [
+            "./resources/images/Farruco.jpg"
+          ],
         "character": "Farruco je zkušený a stabilní, spolehlivá volba pro pokročilé jezdce hledající konzistenci.",
-        "ridingLevel": "Expert"
+        "ridingLevel": "Expert",
+        "genealogyPdf": "./resources/stambomen/ANCCE_Farruco.pdf",
+        "video": ""
     },
     {
         "id": 12,
@@ -187,8 +247,20 @@
         "price": "Na dotaz",
         "x-rays": true,
         "approvedForBreeding": true,
-        "image": "./resources/images/Divino.jpg",
-        "character": "Divino je zkušený a přizpůsobivý, vyniká v pracovní equitaci s horkým chováním.",
-        "ridingLevel": "Expert"
+        "image": "./resources/images/Divino1.jpg",
+        "slideshow": [
+            "./resources/images/Divino1.jpg",
+            "./resources/images/Divino2.png",
+            "./resources/images/Divino3.jpg",
+            "./resources/images/Divino4.jpg",
+            "./resources/images/Divino5.jpg",
+            "./resources/images/Divino6.jpg",
+            "./resources/images/Divino7.jpg",
+            "./resources/images/Divino8.jpg"
+          ],
+        "character": "Divino je zkušený a přizpůsobivý, vyniká v WE s horkým chováním.",
+        "ridingLevel": "Expert",
+        "genealogyPdf": "./resources/stambomen/APSL_Divino.pdf",
+        "video": "https://www.youtube.com/watch?v=RoE4uK9o7YM"
     }
 ]

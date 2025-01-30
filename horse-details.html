@@ -8,6 +8,7 @@
     <meta name="author" content="Danielle Fiene">
     <meta name="description" content="Iberská koně na prodej">
     <meta name="keywords" content="Lusitano, PRE, Pura Raza Espanola, Cartujano, PSL, ANCCE, APSL, Cruzado">
+    <script src="https://kit.fontawesome.com/56e9e1144f.js" crossorigin="anonymous"></script>
     <link href="./resources/CSS/normalize.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./resources/CSS/style.css" type="text/css">
     <title>IberskeKone.cz | Koně ze Španělska</title>
@@ -20,7 +21,7 @@
             <div class="nav__left"></div>
             <div class="nav__center">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#domů" class="nav__link"><span>Domů</span></a></li>
+                    <li class="nav__item"><a href="index.html" class="nav__link"><span>Domů</span></a></li>
                     <li class="nav__item"><a href="#přístup" class="nav__link"><span>Přístup</span></a></li>
                     <li class="nav__item"><a href="#doprava" class="nav__link"><span>Doprava</span></a></li>
                     <li class="nav__item"><a href="#kontakt" class="nav__link"><span>Kontakt</span></a></li>
@@ -33,15 +34,18 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero__content container">
+        <div class="hero__content container"> 
         </div>
     </section>
 
-    <!-- Horse Details Section -->
+    <!-- Horse Details Section  SLIDESHOW-->
     <section class="horse-details container">
-        <div class="horse-details__image">
-            <img id="horse-image" src="" alt="Horse image">
+        <div class="horse-details__slideshow">
+            <button id="prev-slide">‹</button>
+            <img id="horse-slideshow" src="" alt="Horse slideshow">
+            <button id="next-slide">›</button>
         </div>
+        
         <div class="horse-details__info">
             <h2 id="horse-name"></h2> <!-- Added horse name here -->
             <p><strong>Plemeno:</strong> <span id="horse-breed"></span></p> <!-- Added horse breed here -->
@@ -53,10 +57,18 @@
             <p><strong>Cena:</strong> <span id="horse-price"></span></p>
             <p><strong>Uchovnění:</strong> <span id="horse-approved"></span></p>
             <p><strong>Má RTG:</strong> <span id="horse-xrays"></span></p>
+            <p><strong>Rodokmen:</strong> <span id="horse-genealogy"><i class="fa-solid fa-file-pdf"></i></span></p>
             <p><strong>Povaha:</strong> <span id="horse-character"></span></p>
             <p><strong>Úroveň ježdění:</strong> <span id="horse-riding-level"></span></p>
         </div>
         
+    </section>
+
+      <!-- Horse Details Section  VIDEOS-->
+    <section class="horse-details__video container">
+        <div class="horse-details__video ">
+            <p><strong></strong> <span id="horse-video"></span></p>
+        </div>
     </section>
 
     <!-- Footer Section -->

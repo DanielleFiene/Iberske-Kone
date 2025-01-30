@@ -46,13 +46,15 @@ function renderHorseCards(horses) {
     horseAge.innerHTML = `<span style="font-weight: 900">Věk:</span> ${horse.age}`;
 
     const horseDiscipline = document.createElement('p');
-    horseDiscipline.innerHTML = `<span style="font-weight: 900">Vhodný pro:</span> ${horse.discipline}`;
+    horseDiscipline.innerHTML = `<span style="font-weight: 900">Vhodný pro:</span> ${horse.discipline.join(', ')}`;    
 
     const horseSize = document.createElement('p');
     horseSize.innerHTML = `<span style="font-weight: 900">Výška:</span> ${horse.size}`;
 
     const horsePrice = document.createElement('p');
-    horsePrice.innerHTML = `<span style="font-weight: 900">Cena:</span> ${horse.price} €`;
+    // Format the price with a dot separator (e.g., "20.500")
+    const formattedPrice = horse.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    horsePrice.innerHTML = `<span style="font-weight: 900">Cena:</span> ${formattedPrice} €`;
 
     // approved for breeding indicator
     const horseApproved = document.createElement('p');
