@@ -1,7 +1,9 @@
 [
     {
         "id": 1,
-        "name": "Orador do Luar",
+        "ownerID": 1,
+        "name": "Orador",
+        "fullName": "Orador do Luar",
         "breed": "Lusitano",
         "gender": "Hřebec",
         "color": "Bělouš",
@@ -23,7 +25,9 @@
     },
     {
         "id": 2,
+        "ownerID": 1,
         "name": "Embasador",
+        "fullName": "Embasador XI",
         "breed": "PRE",
         "gender": "Valach",
         "color": "Bělouš",
@@ -44,7 +48,9 @@
     },
     {
         "id": 3,
+        "ownerID": 1,
         "name": "Flurry",
+        "fullName": "Flurry de Valencia",
         "breed": "Cruzado",
         "gender": "Kobyla",
         "color": "Bělouš",
@@ -65,7 +71,9 @@
     },
     {
         "id": 4,
-        "name": "Queluz do Luar",
+        "ownerID": 2,
+        "name": "Queluz",
+        "fullName": "Queluz do Luar",
         "breed": "Lusitano",
         "gender": "Hřebec",
         "color": "Palomino",
@@ -86,7 +94,9 @@
     },
     {
         "id": 5,
-        "name": "Virrey Mor",
+        "ownerID": 1,
+        "name": "Virrey",
+        "fullName": "Virrey Mor",
         "breed": "PRE",
         "gender": "Hřebec",
         "color": "Hnědák",
@@ -107,7 +117,9 @@
     },
     {
         "id": 6,
+        "ownerID": 1,
         "name": "Cubero",
+        "fullName": "Cubero",
         "breed": "PRE",
         "gender": "Hřebec",
         "color": "Bělouš",
@@ -117,9 +129,9 @@
         "price": 16000,
         "x-rays": true,
         "approvedForBreeding": false,
-        "image": "./resources/images/Schimmel 1.jpg",
+        "image": "./resources/images/Cubero.jpg",
         "slideshow": [
-            "./resources/images/Schimmel 1.jpg"
+            "./resources/images/Cubero.jpg"
           ],
         "character": "Cubero je přátelský a uvolněný, skvělý společník pro méně náročné ježdění.",
         "ridingLevel": "Začátečník",
@@ -128,7 +140,9 @@
     },
     {
         "id": 7,
-        "name": "Hosco A",
+        "ownerID": 1,
+        "name": "Hosco",
+        "fullName": "Hosco A",
         "breed": "PRE",
         "gender": "Hřebec",
         "color": "Palomino",
@@ -138,9 +152,9 @@
         "price": 25000,
         "x-rays": false,
         "approvedForBreeding": true,
-        "image": "./resources/images/HoscoA.jpg",
+        "image": "./resources/images/Hosco.jpg",
         "slideshow": [
-            "./resources/images/HoscoA.jpg"
+            "./resources/images/Hosco.jpg"
           ],
         "character": "Hosco A je citlivý a obratný, vyniká jak v drezúře, tak v WE.",
         "ridingLevel": "Pokročilý",
@@ -149,12 +163,14 @@
     },
     {
         "id": 8,
+        "ownerID": 1,
         "name": "Tordita",
+        "fullName": "Tordita de Jesus",
         "breed": "PRE",
         "gender": "Kobyla",
         "color": "Bělouš",
         "age": 4,
-        "discipline": ["Working Equitation"],
+        "discipline": ["Drezuru", "Working Equitation"],
         "size": 165,
         "price": 9500,
         "x-rays": true,
@@ -172,7 +188,9 @@
     },
     {
         "id": 9,
+        "ownerID": 1,
         "name": "Paquirri",
+        "fullName": "Paquirri",
         "breed": "Lusitano",
         "gender": "Valach",
         "color": "Hnědák",
@@ -193,7 +211,9 @@
     },
     {
         "id": 10,
+        "ownerID": 1,
         "name": "Larapio",
+        "fullName": "Larapio AMB",
         "breed": "Lusitano",
         "gender": "Hřebec",
         "color": "Bělouš",
@@ -216,7 +236,9 @@
     },
     {
         "id": 11,
-        "name": "Farruco XCVII",
+        "ownerID": 1,
+        "name": "Farruco",
+        "fullName": "Farruco XCVII",
         "breed": "PRE",
         "gender": "Valach",
         "color": "Hnědák",
@@ -237,7 +259,9 @@
     },
     {
         "id": 12,
+        "ownerID": 1,
         "name": "Divino",
+        "fullName": "Divino HP",
         "breed": "Lusitano",
         "gender": "Valach",
         "color": "Bělouš",

@@ -220,3 +220,5 @@ function filterHorses() {
 // Add event listener to the "Hledat" button
 const searchButton = document.querySelector('.search-button');
 searchButton.addEventListener('click', filterHorses);
+
+

@@ -13,21 +13,22 @@ fetch('./resources/horses.json')
       document.getElementById('horse-age').textContent = `${horse.age} let`;
       document.getElementById('horse-discipline').textContent = horse.discipline.join(', ');
       document.getElementById('horse-size').textContent = `${horse.size} cm`;
-      const horsePriceElement = document.getElementById('horse-price');
       
+      const horsePriceElement = document.getElementById('horse-price');
       // Format the price with a dot separator (e.g., "20.500") and no euro sign on na dotaz
       const formattedPrice = typeof horse.price === "number" 
         ? horse.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") 
         : horse.price;
-
       horsePriceElement.textContent = horse.price === "Na dotaz" ? "Na dotaz" : `${formattedPrice} €`;
 
+       // Approved for breeding
       document.getElementById('horse-approved').innerHTML = horse.approvedForBreeding 
         ? '<span style="color: green;">✔</span>' 
         : '<span style="color: red;">✖</span>';
       document.getElementById('horse-xrays').innerHTML = horse['x-rays'] 
         ? '<span style="color: green;">✔</span>' 
         : '<span style="color: red;">✖</span>';
+
       document.getElementById('horse-character').textContent = horse.character;
       document.getElementById('horse-riding-level').textContent = horse.ridingLevel;
 
@@ -71,27 +72,10 @@ fetch('./resources/horses.json')
 
       updateSlide(); // Initialize the first slide
 
-      // Genealogy PDF: If a PDF exists, create an icon that opens it in a new tab
-      const genealogyIcon = document.getElementById('horse-genealogy'); // The element with the icon
-      if (horse.genealogyPdf) {
-        const genealogyLink = document.createElement('a');
-        genealogyLink.href = horse.genealogyPdf;
-        genealogyLink.target = '_blank';
-        genealogyIcon.innerHTML = `<a href="${horse.genealogyPdf}" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>`;
-      } else {
-        genealogyIcon.innerHTML = 'Není k dispozici'; // If no genealogy PDF, show a text message
-      }
-
       window.scrollTo({
         top: document.querySelector('.horse-details').offsetTop, // Scroll to the top of the horse details section
         behavior: 'smooth' // Smooth scroll animation
       });
 
-    } else {
-      document.querySelector('.hero__content').innerHTML = '<h1>Kůň nenalezen</h1>';
-    }
-  })
-  .catch(error => {
-    console.error('Error loading horse data:', error);
-    document.querySelector('.hero__content').innerHTML = '<h1>Chyba při načítání dat o koni</h1>';
+    } 
   });
