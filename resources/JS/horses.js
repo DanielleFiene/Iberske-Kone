@@ -51,10 +51,19 @@ function renderHorseCards(horses) {
     const horseSize = document.createElement('p');
     horseSize.innerHTML = `<span style="font-weight: 900">Výška:</span> ${horse.size}`;
 
-    const horsePrice = document.createElement('p');
+
     // Format the price with a dot separator (e.g., "20.500")
-    const formattedPrice = horse.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    horsePrice.innerHTML = `<span style="font-weight: 900">Cena:</span> ${formattedPrice} €`;
+    const horsePrice = document.createElement('p');
+
+    let formattedPrice;
+    if (horse.price === "Na dotaz") {
+      formattedPrice = "Na dotaz"; // No formatting needed
+    } else {
+      formattedPrice = horse.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+    
+    horsePrice.innerHTML = `<span style="font-weight: 900">Cena:</span> ${formattedPrice}${horse.price === "Na dotaz" ? "" : " €"}`;
+    
 
     // approved for breeding indicator
     const horseApproved = document.createElement('p');

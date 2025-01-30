@@ -15,7 +15,7 @@ fetch('./resources/horses.json')
       document.getElementById('horse-size').textContent = `${horse.size} cm`;
       const horsePriceElement = document.getElementById('horse-price');
       
-      // Format the price with a dot separator (e.g., "20.500")
+      // Format the price with a dot separator (e.g., "20.500") and no euro sign on na dotaz
       const formattedPrice = typeof horse.price === "number" 
         ? horse.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") 
         : horse.price;
