@@ -1,0 +1,84 @@
+{
+    "id": 1,
+    "name": "Carla Aquirre Pascasio",
+    "clinic": "Veterinaria Clinica Equina",
+    "website": "https://cvanimalicos.com/_equipo/",
+    "email": "aguirre777@yahoo.es",
+    "email2": "gestion@cvanimalicos.com",
+    "phone": "0034 609 892 693",
+    "specializations": [
+        {
+            "area": "Traumatology",
+            "description": "Specialized in the treatment of musculoskeletal injuries and disorders in horses."
+        },
+        {
+            "area": "Surgery",
+            "description": "Expert in equine soft tissue surgery, focusing on surgical procedures related to injuries and diseases."
+        },
+        {
+            "area": "Internal Medicine",
+            "description": "Extensive knowledge in the diagnosis and treatment of internal diseases in horses, including metabolic disorders and respiratory conditions."
+        },
+        {
+            "area": "Equine Rehabilitation",
+            "description": "Post-graduate qualification in equine physiotherapy, specializing in rehabilitation and recovery strategies for horses."
+        }
+    ],
+    "academicQualifications": [
+        {
+            "degree": "Doctorate in Veterinary Medicine",
+            "institution": "University of Murcia",
+            "description": "Doctorate specializing in equine medicine, with a thesis on the use of Doppler in digital ultrasonography for horses with Laminitis."
+        },
+        {
+            "degree": "Postgraduate in Equine Physiotherapy",
+            "institution": "University of Barcelona",
+            "description": "Specialized in physiotherapy and rehabilitation techniques for horses."
+        },
+        {
+            "degree": "Master in Business and Administration",
+            "institution": "ENAE Business School, Murcia",
+            "description": "Master’s degree focusing on management and business strategies in veterinary practices."
+        }
+    ],
+    "certifications": [
+        {
+            "certificate": "Internal Medicine Certification",
+            "awardedBy": "Royal College of Veterinary Surgeons of London, University of Liverpool",
+            "description": "Certified in equine internal medicine, focusing on advanced diagnostics and treatment."
+        },
+        {
+            "certificate": "Soft Tissue Surgery Certification",
+            "awardedBy": "Royal College of Veterinary Surgeons of London, University of Liverpool",
+            "description": "Certified in equine soft tissue surgery, focusing on non-invasive and minimally invasive techniques."
+        },
+        {
+            "certificate": "Spanish Certification in Equine Clinical Medicine",
+            "awardedBy": "Consejo de Veterinarios de España",
+            "description": "Certification in equine clinical medicine, recognizing proficiency in equine health management."
+        },
+        {
+            "certificate": "Board Eligible in European College of Equine Internal Medicine (ECEIM)",
+            "description": "Board eligibility for advanced specialization in equine internal medicine."
+        }
+    ],
+    "research": {
+        "thesisTitle": "Doppler in Digital Ultrasonography in Horses with Laminitis",
+        "award": "Sobresaliente Cum Laude",
+        "description": "Research focused on improving diagnostic techniques for Laminitis using Doppler technology in equines."
+    },
+    "professionalExperience": [
+        {
+            "role": "Veterinary Surgeon",
+            "locations": ["England", "United States", "Europe"],
+            "description": "Professional stints in specialized equine hospitals and clinics, gaining hands-on experience in advanced equine medicine."
+        }
+    ],
+    "languages": [
+        "English",
+        "Spanish"
+    ],
+    "isMobile": true,
+    "area": "Alicante, Murcia",
+    "size": "Medium"
+}

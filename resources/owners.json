@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Danielle Fiene",
+        "companyName": "2. Brabant CZ spol sro",
+        "address": "Krinice 133, 55001 Krinice, Czech Republic",
+        "province": "Hradec Kralove",
+        "airport": "Havel, Prague",
+        "email": "daniellefiene@hotmail.com",
+        "phone1": "+420 601 387 904",
+        "namePhone1": "Danielle",
+        "phone2": "+420 601 387 904",
+        "namePhone2": "Marianne",
+        "website": "https://www.iberskekone.cz",
+        "socialMedia": {
+            "facebook": "",
+            "instagram": ""
+        },
+        "image": "",
+        "focus": "We specialize in selling Iberian horses",
+        "certifications": [""],
+        "languagesSpoken": ["Dutch", "English", "Czech", "German"],
+        "vet": "Henk van der Veen",
+        "size": "",
+        "gallery": [
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Juan Cortes",
+        "companyName": "Centro de entrenamiento equino Juan Cortés",
+        "address": "Unknown street, 03150 Dolores, Spain",
+        "province": "Alicante, Valencia",
+        "airport": "Alicante-Elche Miguel Hernández Airport, Alicante",
+        "email": "",
+        "phone1": "0034 639 968 337",
+        "phone1ContactName": "Juan Cortes",
+        "phone2": "",
+        "phone2ContactName": "Manuela",
+        "website": "",
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/juan.cortesprehorses/?locale=es_ES"
+        },
+        "image": "./resources/images/hierros/JC.png",
+        "focus": "We focus on breeding purebred PRE palominos.",
+        "certifications": [
+            "Juan Cortes rode at the Real Escuela and is a GP rider"
+        ],
+        "languagesSpoken": [
+            "Spanish",
+            "English"
+        ],
+        "vetID": 1
+    }
+    
+]

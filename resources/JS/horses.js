@@ -10,6 +10,22 @@ fetch('./resources/horses.json')
   })
   .catch(error => console.error('Error loading horse data:', error));
 
+    // Function to calculate horse age from dateOfBirth
+    function calculateAge(dateOfBirth) {
+        const birthDate = new Date(dateOfBirth);
+        const today = new Date();
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDiff = today.getMonth() - birthDate.getMonth();
+    
+        // If the birth month is later in the year, subtract one year
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+        }
+        return age;
+    }
+
+
+  
 // Function to render horse cards
 function renderHorseCards(horses) {
   const horseCardsContainer = document.getElementById('horse-cards');
@@ -42,15 +58,16 @@ function renderHorseCards(horses) {
     const horseColor = document.createElement('p');
     horseColor.innerHTML = `<span style="font-weight: 900">Barva:</span> ${horse.color}`;
 
+
     const horseAge = document.createElement('p');
-    horseAge.innerHTML = `<span style="font-weight: 900">Věk:</span> ${horse.age}`;
+    const computedAge = calculateAge(horse.dateOfBirth);
+    horseAge.innerHTML = `<span style="font-weight: 900">Věk:</span> ${computedAge} let`;
 
     const horseDiscipline = document.createElement('p');
-    horseDiscipline.innerHTML = `<span style="font-weight: 900">Vhodný pro:</span> ${horse.discipline.join(', ')}`;    
+    horseDiscipline.innerHTML = `<span style="font-weight: 900">Vhodný pro:</span> ${horse.discipline.join(', ')}`;
 
     const horseSize = document.createElement('p');
     horseSize.innerHTML = `<span style="font-weight: 900">Výška:</span> ${horse.size}`;
-
 
     // Format the price with a dot separator (e.g., "20.500")
     const horsePrice = document.createElement('p');
@@ -63,24 +80,23 @@ function renderHorseCards(horses) {
     }
     
     horsePrice.innerHTML = `<span style="font-weight: 900">Cena:</span> ${formattedPrice}${horse.price === "Na dotaz" ? "" : " €"}`;
-    
 
     // approved for breeding indicator
     const horseApproved = document.createElement('p');
     horseApproved.classList.add('horse-xrays');
     if (horse["approvedForBreeding"]) {
-      horseApproved.innerHTML = '<span style="font-weight: 900">Uchovnění:</span> <span style="color: green;">✔</span>';
+      horseApproved.innerHTML = `<span style="font-weight: 900">Uchovnění:</span> <span style="color: green;">✔</span>`;
     } else {
-      horseApproved.innerHTML = '<span style="font-weight: 900">Uchovnění:</span> <span style="color: red;">✖</span>';
+      horseApproved.innerHTML = `<span style="font-weight: 900">Uchovnění:</span> <span style="color: red;">✖</span>`;
     }
 
     // X-ray indicator
     const horseXRays = document.createElement('p');
     horseXRays.classList.add('horse-xrays');
     if (horse["x-rays"]) {
-      horseXRays.innerHTML = '<span style="font-weight: 900">Má RTG:</span> <span style="color: green;">✔</span>';
+      horseXRays.innerHTML = `<span style="font-weight: 900">Má RTG:</span> <span style="color: green;">✔</span>`;
     } else {
-      horseXRays.innerHTML = '<span style="font-weight: 900">Má RTG:</span> <span style="color: red;">✖</span>';
+      horseXRays.innerHTML = `<span style="font-weight: 900">Má RTG:</span> <span style="color: red;">✖</span>`;
     }
 
     // Append the elements to the card
@@ -94,7 +110,6 @@ function renderHorseCards(horses) {
     horseDetails.appendChild(horseApproved);
     horseDetails.appendChild(horseXRays);
     horseDetails.appendChild(horsePrice);
-
 
     // Wrap the horse card in a link element
     const horseLink = document.createElement('a');
@@ -116,7 +131,7 @@ function renderHorseCards(horses) {
 function filterHorses() {
   const breedFilter = document.getElementById('breed').value;
   const genderFilter = document.getElementById('gender').value;
-  const ageFilter = document.getElementById('age').value;
+  const ageFilter = document.getElementById('dateOfBirth').value;
   const disciplineFilter = document.getElementById('discipline').value;
   const sizeFilter = document.getElementById('size').value;
   const priceFilter = document.getElementById('price').value;
@@ -174,8 +189,8 @@ function filterHorses() {
       if (ageFilter === 'all') {
           isAgeMatch = true; // No age filter applied
       } else {
-          // Extract numerical age from the horse's "age" string (e.g., "6 let" -> 6)
-          const horseAge = parseInt(horse.age); 
+          // use calculateAge function to get horses age
+          const horseAge = calculateAge(horse.dateOfBirth); 
 
           // Split the age filter (e.g., "0-1" -> [0, 1])
           const [minAge, maxAge] = ageFilter.split('-').map(val => {
@@ -220,5 +235,3 @@ function filterHorses() {
 // Add event listener to the "Hledat" button
 const searchButton = document.querySelector('.search-button');
 searchButton.addEventListener('click', filterHorses);
-
-
