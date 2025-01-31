@@ -305,7 +305,7 @@ button {
   background: #000000;   /* Initial background color */
   position: relative;     /* Needed for the pseudo-element */
   z-index: 1;             /* Ensures button content stays on top of the gradient */
-  transition: background 0.3s ease; /* Optional: for smooth non-gradient background changes */
+  transition: backgrouncolor 0.3s ease; /* Optional: for smooth non-gradient background changes */
 }
 
 .hero__title::before {
@@ -319,6 +319,26 @@ button {
   opacity: 0; /* Initially invisible */
   transition: opacity 0.5s ease; /* Smooth opacity transition */
   z-index: -1; /* Ensure the gradient is behind the button text */
+}
+
+.flags {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease; /* Transition applied to the container, if needed */
+}
+
+.flag {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: transform 0.3s ease; /* Ensure the transition is applied to the flag itself */
+}
+
+.flag:hover {
+  transform: scale(1.2); /* Smoothly increase the size when hovered */
 }
 
 .button-portuguese:hover::before {
