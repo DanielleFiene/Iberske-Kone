@@ -211,13 +211,7 @@ button {
     align-items: center; /* Centers the logo vertically */
 }
 
-/* Styling for logo */
-.nav__logo .logo {
-    width:40px;
-    height: auto;
-    margin-right: 10px;
-    border-radius: 5px;
-}
+
 
 .nav__center {
     flex-grow: 1;
@@ -620,7 +614,6 @@ button {
 .horse-details {
   border-radius: 8px;
   padding: 30px;
-
   margin-top: 20px;
   display: flex; /* Use flexbox for horizontal layout */
   gap: 20px; /* Add space between image and text */
@@ -722,9 +715,21 @@ button {
 
 .footer {
     padding: 30px 20px;
-    margin-top: auto;
+    margin-top: 4rem;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.fa-envelope,
+.fa-phone {
+  margin-right: 15px;
+  font-size: var(--small-font-size);
+}
+
+.fa-whatsapp {
+  margin-right: 13px;
+  font-size: 1.3rem;
+}
+
 
 .footer p {
     font-size: var(--smaller-font-size);
@@ -732,7 +737,7 @@ button {
 
 .footer__info {
     display: flex; /* Makes the container a flexbox */
-    justify-content: space-between; /* Ensures the divs are spaced evenly */
+    justify-content: space-around; /* Ensures the divs are spaced evenly */
     flex-wrap: wrap; /* Allows content to wrap if needed */
     font-size: var(--smaller-font-size);
 }
@@ -746,6 +751,22 @@ button {
     display: flex;
     flex-direction: column; /* Stacks the copyright and contact vertically */
     gap: 10px;
+    justify-content: center; 
+    align-items: flex-start; 
+}
+
+/* Container for footer center (logo) */
+.footer__center {
+  display: flex;
+  justify-content: center; /* Centers the logo horizontally */
+  align-items: center; /* Centers the logo vertically */
+  padding: 10px 0; /* Adds some padding around the logo */
+}
+
+.footer__center .logo {
+  width: 120px; /* Adjust the size of the logo */
+  height: auto;
+  border-radius: 8px;
 }
 
 .footer__copy {
@@ -760,6 +781,8 @@ button {
     display: flex;
     flex-direction: column; /* Stacks company details vertically */ 
     gap: 10px;
+    justify-content: center; 
+    align-items: flex-end; 
 }
 
 .footer__copy a {

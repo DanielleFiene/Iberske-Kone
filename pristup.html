@@ -12,8 +12,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="">
     <link rel="icon" type="image/png" sizes="32x32" href="">
     <link rel="icon" type="image/png" sizes="16x16" href="">
-    <link href="./resources/CSS/normalize.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./resources/CSS/faq.css" type="text/css">
+    <link href="../resources/CSS/normalize.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../resources/CSS/faq.css" type="text/css">
     <title>IberskeKone.cz | Přístup/FAQ</title>
 </head>
 
@@ -49,8 +49,17 @@
 
 <!-- Main content container for info -->
 <section class="access container">
-    <h2 class="faq-title">Všechny základní informace, které potřebujete pro plánování vaší cesty za nákupem koní s Iberske Kone</h1>
-    <p class="faq-title">Máte stále nějaké pochybnosti? Napište nám přímo na: <a href="mailto:kone@iberskekone.cz">kone@iberskekone.cz</a></p>
+    <h2 class="faq-title">Všechny základní informace, které potřebujete pro plánování vaší cesty za nákupem koní s Iberske Kone</h2>
+    <div class="faq">
+        <h3 class="faq-title">Něco o mně:</h3>
+        
+        <p class="faq-title">Jsem jezdec z Nizozemska, dělám drezuru a Working Equitation, žila jsem v České republice a nyní žiji ve Španělsku.<br> Můj cíl je pomoci lidem najít jejich vysněného koně. <br>
+            Mluvím nizozemsky, anglicky, německy, česky a španělsky.</p>
+    
+        <p class="faq-title">Máte stále nějaké pochybnosti? Napište nám přímo na: <a href="mailto:kone@iberskekone.cz">kone@iberskekone.cz</a></p>
+    </div>
+    
+
 
     <div class="faq">
         <div class="faq-item">
@@ -59,6 +68,13 @@
                 Během vaší cesty vás budu doprovázet, abych zajistil/a, že budete dobře připraveni na každou prohlídku a odpočatí mezi návštěvami.<br>
                 Klient je odpovědný za pokrytí všech cestovních nákladů, včetně paliva, mýtného, jídel a ubytování (pokud je to nutné).<br>
                 Souhrn těchto nákladů vám bude poskytnut a fakturován před vaším příjezdem, s případnými úpravamy na konci cesty, zejména pro palivo.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Co když nechci využít vaše služby?<i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">Není žádný problém, chápeme, že každý má jiné preference! <br>
+                V takovém případě mi dejte vědět, o které koně máte zájem, a já pro vás ověřím aktuální cenu a dostupnost. <br>
+                Jakmile bude vše potvrzeno, poskytnu vám adresu a telefonní kontakt na chovatele/majitele a můžete se s ním domluvit přímo.
             </div>
         </div>
         <div class="faq-item">
@@ -135,15 +151,20 @@
                 </div>
         </div>
         <div class="faq-item">
+            <button class="faq-question">Mohu jezdit na koni více než jednou?<i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">Ano, je možné domluvit vícenásobné jízdy na vašem preferovaném koni.</div>
+        </div>
+        <div class="faq-item">
             <button class="faq-question">Jaké cestovní pojištění potřebuji?<i class="fas fa-chevron-down"></i></button>
             <div class="faq-answer">Důrazně doporučuji sjednání cestovního pojištění, které pokrývá i ježdění na koních, protože nemohu zaručit, že všechny stáje, které navštívíme, mají dostatečné pojištění.<br>
                 Je opravdu důležité, abyste se při každé návštěvě cítili pohodlně při zkoušení koní – všechny koně vám budou ukázáni, jak je ošetřují a jezdí na nich, než je vyzkoušíte.<br>
                 Pokud se nebudete cítit pohodlně při jízdě na určitém koni, není to problém.</div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">Mohu jezdit na koni více než jednou?<i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">Ano, je možné domluvit vícenásobné jízdy na vašem preferovaném koni.</div>
-        </div>
+            <button class="faq-question">Transport koně do Čech<i class="fas fa-chevron-down"></i></button> 
+            <div class="faq-answer">Pokud budete chtít, mohu pro vás zajistit přepravu koně do Česka.<br>
+                Stačí mi dát vědět, nebo si ji můžete zařídit sami – záleží jen na vás.</div> 
+        </div>        
         <div class="faq-item">
             <button class="faq-question">Mohu koupit koně bez návštěvy?<i class="fas fa-chevron-down"></i></button>
             <div class="faq-answer">Ano, vzdálený nákup je možný, ale s určitými omezeními.<br>
@@ -162,24 +183,35 @@
 <footer class="footer section">
     <div class="footer__info container">
         <div class="footer__left">
-            <span class="footer__copy">
-                Všechna práva vyhrazena <i class="fa-regular fa-copyright"></i> Iberske Kone 2025
-            </span>
-            <a href="mailto:info@iberskekone.cz">info@iberskekone.cz</a>
-            <a href="tel:+420601387904">+420 601 387 904</a>
+            <span class="footer__copy"></span>
+               <p> Všechna práva vyhrazena <i class="fa-regular fa-copyright"></i> Iberské Kone 2025</p>
+            
+            <a href="mailto:kone@iberskekone.cz"><i class="fa-regular fa-envelope"></i>kone@iberskekone.cz</a>
+            <a href="tel:+420601387904"><i class="fa-solid fa-phone"></i>+420 601 387 904</a>
+            <a href="https://wa.me/420601387904"><i class="fa-brands fa-whatsapp"></i>+420 601 387 904</a>            
+        </div>
+
+        <div class="footer__center">
+            <a href="index.html" class="nav__logo">
+                <img src="./resources/logo/LogoLightcropped.jpg" alt="Your Logo" class="logo" />
+            </a>
+
         </div>
 
         <div class="footer__right">
-            <span class="footer__company">Podrobnosti o společnosti:</span>
+            <span class="footer__company"></span>
+            <p>Iberské Kone</p>
             <p>2. Brabant CZ, spol s.r.o.</p>
-            <p>Company ID: 12345678</p>
+            <p>Křinice 133, 550 01 Křinice, ČR</p>
+            <p>IČ: 25976184 | DIČ: CZ25976184</p>
         </div>
     </div>
 </footer>
 
 
+
 <!-- JS -->
-<script src="./resources/JS/faqDropdown.js"></script>
+<script src="../resources/JS/faqDropdown.js"></script>
 
 </body>
 
