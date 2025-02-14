@@ -299,7 +299,7 @@ button {
   background: #000000;   /* Initial background color */
   position: relative;     /* Needed for the pseudo-element */
   z-index: 1;             /* Ensures button content stays on top of the gradient */
-  transition: backgrouncolor 0.3s ease; /* Optional: for smooth non-gradient background changes */
+  transition: 0.3s ease; /* Optional: for smooth non-gradient background changes */
 }
 
 .hero__title::before {
@@ -369,7 +369,6 @@ button {
   font-size: 3em;
   font-weight: bold;
   color: #fff;
-  text-align: center;
   cursor: pointer;
   position: relative;
   overflow: hidden; /* Prevent particles from overflowing the button */
@@ -403,9 +402,6 @@ button {
   }
 }
 
-
-
-
 /* On hover, trigger the animation */
 .button-cruzado:hover .particle {
   animation: fireworkEffect 1s forwards;
@@ -423,9 +419,85 @@ button {
     margin-top: 1rem;
 }
 
+/*================ Responsive Styles hero section==============================*/
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero__content {
+    top: 3%; /* Adjust positioning */
+    left: 3%; /* More space from the edge */
+    max-width: 180px;
+  }
 
-/* ===================== Sidebar Style (Flex Row) ===================== */
+  .hero h1 {
+    font-size: 1.3rem; /* Reduce font size */
+  }
 
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh; /* Reduce height */
+    background-position: center; /* Ensure good visibility */
+  }
+
+  .hero__content {
+    position: absolute;
+    top: 3%;
+    left: 0;  
+    right: 0;  
+    margin: 0 auto; /* Centers it horizontally */
+    text-align: center;
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+  .hero h1 {
+    font-size: 1rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero {
+    height: 50vh; /* Smaller height */
+    background-position: center;
+  }
+
+  .hero__content {
+    position: absolute;
+    top: 0.3%;
+    left: 0;  
+    right: 0;  
+    margin: 0 auto; /* Centers it horizontally */
+    text-align: center;
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+  .hero p {
+    font-size: 0.85rem;
+  }
+
+  .hero__title {
+    padding: 5px 12px; /* Adjust button size */
+  }
+}
 
 /* ===================== Labels and Fields Row ===================== */
 .sidebar {
@@ -799,25 +871,62 @@ button {
     text-decoration: underline;
 }
 
-/* Media query for screens less than 550px */
-@media (max-width: 550px) {
-    .footer__info {
-        flex-direction: column; /* Stack the footer elements vertically */
-        align-items: center; /* Centers the items horizontally */
-        justify-content: center; /* Aligns items with space in the center */
-    }
+@media (max-width: 768px) {
+  .footer__info {
+      flex-direction: column; /* Stack the footer items vertically */
+      align-items: center; /* Ensure content is centered horizontally */
+      justify-content: center; /* Center items vertically */
+  }
 
-    .footer__left,
-    .footer__right {
-        flex: none; /* Prevent them from stretching */
-        width: 100%; /* Ensure each takes full width */
-        text-align: center; /* Centers text inside the divs */
-    }
+  .footer__left,
+  .footer__right {
+      align-items: center; /* Center the content horizontally */
+      justify-content: center; /* Center the content vertically */
+      padding: 15px 0;
+      width: 100%; /* Ensure the left and right sections are full width */
+  }
 
-    .footer__left {
-        margin-bottom: 15px; /* Adds spacing between left and center sections */
-    }
+  .footer__center {
+      padding: 15px 0; /* Adjust padding for better spacing on small screens */
+  }
+
+  .footer__center .logo {
+      width: 100px; /* Adjust the logo size for smaller screens */
+  }
+
+  .footer__copy a {
+      font-size: 0.9rem; /* Reduce the font size of links for smaller screens */
+  }
 }
+
+@media (max-width: 480px) {
+  .footer {
+      padding: 20px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .footer__info {
+      flex-direction: column; /* Stack the footer items vertically */
+      align-items: center; /* Center the content horizontally */
+      justify-content: center; /* Center the content vertically */
+  }
+
+  .footer__left,
+  .footer__right {
+      align-items: center; /* Center the content horizontally */
+      justify-content: center; /* Center the content vertically */
+      width: 100%; /* Ensure full width for smaller screens */
+      text-align: center; /* Center the text */
+  }
+
+  .footer__center .logo {
+      width: 90px; /* Further adjust the logo size */
+  }
+
+  .footer__copy a {
+      font-size: 0.85rem; /* Further reduce font size on very small screens */
+  }
+}
+
 
 
 /*=============== SCROLL BAR ===============*/

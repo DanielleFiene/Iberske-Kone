@@ -303,6 +303,30 @@ button {
     margin-top: 1rem;
 }
 
+/*================ Responsive Styles hero section==============================*/
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    background-position: center
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh; /* Reduce height */
+    background-position: center; /* Ensure good visibility */
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero {
+    height: 50vh; /* Smaller height */
+    background-position: center;
+  }
+}
+
 /*=============== FAQ ===============*/
 
 .faq-title {
@@ -462,26 +486,61 @@ border-radius: 8px;
   text-decoration: underline;
 }
 
-/* Media query for screens less than 550px */
-@media (max-width: 550px) {
+@media (max-width: 768px) {
   .footer__info {
-      flex-direction: column; /* Stack the footer elements vertically */
-      align-items: center; /* Centers the items horizontally */
-      justify-content: center; /* Aligns items with space in the center */
+      flex-direction: column; /* Stack the footer items vertically */
+      align-items: center; /* Ensure content is centered horizontally */
+      justify-content: center; /* Center items vertically */
   }
 
   .footer__left,
   .footer__right {
-      flex: none; /* Prevent them from stretching */
-      width: 100%; /* Ensure each takes full width */
-      text-align: center; /* Centers text inside the divs */
+      align-items: center; /* Center the content horizontally */
+      justify-content: center; /* Center the content vertically */
+      padding: 15px 0;
+      width: 100%; /* Ensure the left and right sections are full width */
   }
 
-  .footer__left {
-      margin-bottom: 15px; /* Adds spacing between left and center sections */
+  .footer__center {
+      padding: 15px 0; /* Adjust padding for better spacing on small screens */
+  }
+
+  .footer__center .logo {
+      width: 100px; /* Adjust the logo size for smaller screens */
+  }
+
+  .footer__copy a {
+      font-size: 0.9rem; /* Reduce the font size of links for smaller screens */
   }
 }
 
+@media (max-width: 480px) {
+  .footer {
+      padding: 20px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .footer__info {
+      flex-direction: column; /* Stack the footer items vertically */
+      align-items: center; /* Center the content horizontally */
+      justify-content: center; /* Center the content vertically */
+  }
+
+  .footer__left,
+  .footer__right {
+      align-items: center; /* Center the content horizontally */
+      justify-content: center; /* Center the content vertically */
+      width: 100%; /* Ensure full width for smaller screens */
+      text-align: center; /* Center the text */
+  }
+
+  .footer__center .logo {
+      width: 90px; /* Further adjust the logo size */
+  }
+
+  .footer__copy a {
+      font-size: 0.85rem; /* Further reduce font size on very small screens */
+  }
+}
 
 
 /*=============== SCROLL BAR ===============*/
