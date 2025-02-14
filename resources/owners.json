@@ -5,6 +5,7 @@
         "companyName": "2. Brabant CZ spol sro",
         "address": "Krinice 133, 55001 Krinice, Czech Republic",
         "province": "Hradec Kralove",
+        "region": "Nachod",
         "airport": "Havel, Prague",
         "email": "daniellefiene@hotmail.com",
         "phone1": "+420 601 387 904",
@@ -32,7 +33,8 @@
         "name": "Juan Cortes",
         "companyName": "Centro de entrenamiento equino Juan Cortés",
         "address": "Unknown street, 03150 Dolores, Spain",
-        "province": "Alicante, Valencia",
+        "province": "Valencia",
+        "region": "Alicante",
         "airport": "Alicante-Elche Miguel Hernández Airport, Alicante",
         "email": "",
         "phone1": "0034 639 968 337",
@@ -53,6 +55,34 @@
             "English"
         ],
         "vetID": 1
+    },
+    {
+        "id": 3,
+        "name": "Jose Cruz",
+        "companyName": "Yeguada Jose Cruz Cano",
+        "address": "Carretera Palmar-Mazarrón, km 27, 30840 Alhama de Murcia, MURCIA",
+        "province": "Murcia",
+        "region": "Murcia",
+        "airport": "Murcia International Airport, Murcia",
+        "email": "yeguadajosecruz@hotmail.com",
+        "phone1": "0034 636 379 957",
+        "phone1ContactName": "Angelita",
+        "phone2": "Jose Cruz",
+        "phone2ContactName": "0043 696 962 337",
+        "website": "https://www.yeguadajosecruzcano.com/",
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/p/Yeguada-Jos%C3%A9-Cruz-100067935979507/?_rdr"
+        },
+        "image": "./resources/images/hierros/JoseCruzCano.png",
+        "focus": "Functional cartujanos, sizes between 160-170, 115 horses, good character, quiet horses, quiet rider, well taken care off, Peralta, Boloix, Marín García, Fernandez Daza, Vizconde de la montesina",
+        "certifications": [
+            ""
+        ],
+        "languagesSpoken": [
+            "Spanish",
+            ""
+        ],
+        "vetID": 1 
     }
     
 ]

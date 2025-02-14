@@ -308,14 +308,13 @@ button {
 .faq-title {
     text-align: center;
     margin-top: 2rem;
-    margin-bottom: 2rem;
 }
 
 .faq {
     max-width: 800px;
     margin: auto;
     text-align: left;
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-bottom: 6rem;
 }
 .faq-item {
@@ -378,80 +377,111 @@ button {
 /*=============== FOOTER ===============*/
 
 .footer {
-    padding: 30px 20px;
-    margin-top: auto;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  margin-top: 4rem;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.fa-envelope,
+.fa-phone {
+margin-right: 15px;
+font-size: var(--small-font-size);
+}
+
+.fa-whatsapp {
+margin-right: 13px;
+font-size: 1.3rem;
+}
+
+
 .footer p {
-    font-size: var(--smaller-font-size);
+  font-size: var(--smaller-font-size);
 }
 
 .footer__info {
-    display: flex; /* Makes the container a flexbox */
-    justify-content: space-between; /* Ensures the divs are spaced evenly */
-    flex-wrap: wrap; /* Allows content to wrap if needed */
-    font-size: var(--smaller-font-size);
+  display: flex; /* Makes the container a flexbox */
+  justify-content: space-around; /* Ensures the divs are spaced evenly */
+  flex-wrap: wrap; /* Allows content to wrap if needed */
+  font-size: var(--smaller-font-size);
 }
 
 .footer__left,
 .footer__right {
-    padding: 10px;
+  padding: 10px;
 }
 
 .footer__left {
-    display: flex;
-    flex-direction: column; /* Stacks the copyright and contact vertically */
-    gap: 10px;
+  display: flex;
+  flex-direction: column; /* Stacks the copyright and contact vertically */
+  gap: 10px;
+  justify-content: center; 
+  align-items: flex-start; 
+}
+
+/* Container for footer center (logo) */
+.footer__center {
+display: flex;
+justify-content: center; /* Centers the logo horizontally */
+align-items: center; /* Centers the logo vertically */
+padding: 10px 0; /* Adds some padding around the logo */
+}
+
+.footer__center .logo {
+width: 120px; /* Adjust the size of the logo */
+height: auto;
+border-radius: 8px;
 }
 
 .footer__copy {
-    margin-bottom: 10px; /* Adds some space between copyright and contact details */
+  margin-bottom: 10px; /* Adds some space between copyright and contact details */
 }
 
 .footer__copy a {
-    margin-top: 5px; /* Adds some space between the links */
+  margin-top: 5px; /* Adds some space between the links */
 }
 
 .footer__right {
-    display: flex;
-    flex-direction: column; /* Stacks company details vertically */ 
-    gap: 10px;
+  display: flex;
+  flex-direction: column; /* Stacks company details vertically */ 
+  gap: 10px;
+  justify-content: center; 
+  align-items: flex-end; 
 }
 
 .footer__copy a {
-    margin: 0 0 5px 0; /* Adds some margin to space out the links */
+  margin: 0 0 5px 0; /* Adds some margin to space out the links */
 }
 
 /* Style for the links */
 .footer__copy a {
-    text-decoration: none;
-    transition: .3s;
+  text-decoration: none;
+  transition: .3s;
 }
 
 .footer__copy a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Media query for screens less than 550px */
 @media (max-width: 550px) {
-    .footer__info {
-        flex-direction: column; /* Stack the footer elements vertically */
-        align-items: center; /* Centers the items horizontally */
-        justify-content: center; /* Aligns items with space in the center */
-    }
+  .footer__info {
+      flex-direction: column; /* Stack the footer elements vertically */
+      align-items: center; /* Centers the items horizontally */
+      justify-content: center; /* Aligns items with space in the center */
+  }
 
-    .footer__left,
-    .footer__right {
-        flex: none; /* Prevent them from stretching */
-        width: 100%; /* Ensure each takes full width */
-        text-align: center; /* Centers text inside the divs */
-    }
+  .footer__left,
+  .footer__right {
+      flex: none; /* Prevent them from stretching */
+      width: 100%; /* Ensure each takes full width */
+      text-align: center; /* Centers text inside the divs */
+  }
 
-    .footer__left {
-        margin-bottom: 15px; /* Adds spacing between left and center sections */
-    }
+  .footer__left {
+      margin-bottom: 15px; /* Adds spacing between left and center sections */
+  }
 }
+
 
 
 /*=============== SCROLL BAR ===============*/
