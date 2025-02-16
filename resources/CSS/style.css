@@ -211,8 +211,6 @@ button {
     align-items: center; /* Centers the logo vertically */
 }
 
-
-
 .nav__center {
     flex-grow: 1;
     display: flex;
@@ -261,6 +259,48 @@ button {
   color: var(--first-color);
   text-decoration: underline;
 }
+
+/* Hamburger button for mobile */
+.nav__toggle {
+  display: none; /* Hide the hamburger by default */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav__toggle .bar {
+  width: 30px;
+  height: 4px;
+  background-color: var(--first-color-alt);
+  border-radius: 5px;
+}
+
+/* Media Queries for mobile responsiveness */
+@media (max-width: 768px) {
+  /* Hide navigation menu by default on small screens */
+  .nav__list {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  /* Display the hamburger button */
+  .nav__toggle {
+      display: flex;
+  }
+
+  /* Show navigation menu when the hamburger button is clicked */
+  .nav__list.show {
+      display: flex;
+  }
+}
+
 
 /* ================Hero Section Styles==================== */
 .hero {
@@ -633,28 +673,26 @@ button {
     .horse-cards {
         grid-template-columns: 1fr 1fr; /* 2 kolommen op tablet-scherm */
     }
+
+    .horse-card img {
+      max-height: 200px;
+    }
 }
 
 @media (max-width: 600px) {
     .horse-cards {
         grid-template-columns: 1fr; /* 1 kolom op mobiele apparaten */
     }
+
+    .horse-card img {
+      max-height: 200px;
+    }
 }
 
 /* ===================== Responsive design ======================== */
 @media (max-width: 1024px) {
     .sidebar {
-        width: 100%; /* Zorg ervoor dat de sidebar de volledige breedte krijgt op kleinere schermen */
-    }
-
-    .horse-cards {
-        grid-template-columns: 1fr 1fr; /* Maak twee kolommen op kleinere schermen */
-    }
-}
-
-@media (max-width: 768px) {
-    .horse-cards {
-        grid-template-columns: 1fr; /* Maak de kaarten onder elkaar op nog kleinere schermen */
+        width: 100%;
     }
 }
 
@@ -691,6 +729,7 @@ button {
   gap: 20px; /* Add space between image and text */
   align-items: flex-start; /* Align items to the top */
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 #horse-name {
@@ -711,12 +750,10 @@ button {
 
 .horse-details__info p strong {
   font-weight: bold;
-  color: #555;
 }
 
 /* Price and Breeding Info */
 .horse-details__info span {
-  color: #555;
   font-weight: normal;
 }
 
@@ -778,104 +815,120 @@ button {
   gap: 20px; /* Add space between image and text */
   align-items: flex-start; /* Align items to the top */
   justify-content: space-evenly;
-
+  flex-wrap: wrap;
 }
+
+
+
 /*=============== CONTACT ===============*/
 
 
 /*=============== FOOTER ===============*/
 
 .footer {
-    padding: 30px 20px;
-    margin-top: 4rem;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  margin-top: 4rem;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.fa-envelope,
-.fa-phone {
-  margin-right: 15px;
-  font-size: var(--small-font-size);
+.footer .fa-copyright {
+  color: var(--text-color) !important;
 }
 
-.fa-whatsapp {
-  margin-right: 13px;
-  font-size: 1.3rem;
+.footer .fa-envelope,
+.footer .fa-phone {
+margin-right: 15px;
+font-size: var(--small-font-size);
+color: var(--first-color) !important;
+}
+
+.footer .fa-whatsapp {
+margin-right: 13px;
+font-size: 1.3rem;
+color: var(--first-color) !important;
 }
 
 
 .footer p {
-    font-size: var(--smaller-font-size);
+  font-size: var(--smaller-font-size);
 }
 
+.footer a {
+  color: var(--first-color) !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover,
+.footer a:hover i {
+  color: var(--first-color-alt) !important;
+}
+
+
 .footer__info {
-    display: flex; /* Makes the container a flexbox */
-    justify-content: space-around; /* Ensures the divs are spaced evenly */
-    flex-wrap: wrap; /* Allows content to wrap if needed */
-    font-size: var(--smaller-font-size);
+  display: flex; /* Makes the container a flexbox */
+  justify-content: space-around; /* Ensures the divs are spaced evenly */
+  flex-wrap: wrap; /* Allows content to wrap if needed */
+  font-size: var(--smaller-font-size);
 }
 
 .footer__left,
 .footer__right {
-    padding: 10px;
+  padding: 10px;
 }
 
 .footer__left {
-    display: flex;
-    flex-direction: column; /* Stacks the copyright and contact vertically */
-    gap: 10px;
-    justify-content: center; 
-    align-items: flex-start; 
+  display: flex;
+  flex-direction: column; /* Stacks the copyright and contact vertically */
+  gap: 10px;
+  justify-content: center; 
+  align-items: flex-start; 
 }
 
 /* Container for footer center (logo) */
 .footer__center {
-  display: flex;
-  justify-content: center; /* Centers the logo horizontally */
-  align-items: center; /* Centers the logo vertically */
-  padding: 10px 0; /* Adds some padding around the logo */
+display: flex;
+justify-content: center; /* Centers the logo horizontally */
+align-items: center; /* Centers the logo vertically */
+padding: 10px 0; /* Adds some padding around the logo */
 }
 
 .footer__center .logo {
-  width: 120px; /* Adjust the size of the logo */
-  height: auto;
-  border-radius: 8px;
+width: 120px; /* Adjust the size of the logo */
+height: auto;
+border-radius: 8px;
 }
 
 .footer__copy {
-    margin-bottom: 10px; /* Adds some space between copyright and contact details */
-}
-
-.footer__copy a {
-    margin-top: 5px; /* Adds some space between the links */
+  margin-bottom: 10px; /* Adds some space between copyright and contact details */
 }
 
 .footer__right {
-    display: flex;
-    flex-direction: column; /* Stacks company details vertically */ 
-    gap: 10px;
-    justify-content: center; 
-    align-items: flex-end; 
+  display: flex;
+  flex-direction: column; /* Stacks company details vertically */ 
+  gap: 10px;
+  justify-content: center; 
+  align-items: flex-end; 
 }
 
 .footer__copy a {
-    margin: 0 0 5px 0; /* Adds some margin to space out the links */
-}
-
-/* Style for the links */
-.footer__copy a {
-    text-decoration: none;
-    transition: .3s;
+  margin: 0 0 5px 0;
+  text-decoration: none;
+  transition: .3s;
 }
 
 .footer__copy a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
+/* =================== MEDIA QUERIES =================== */
+
+/* Tablet Styles (max-width: 768px) */
 @media (max-width: 768px) {
   .footer__info {
       flex-direction: column; /* Stack the footer items vertically */
       align-items: center; /* Ensure content is centered horizontally */
       justify-content: center; /* Center items vertically */
+      padding: 20px 0; /* Added padding for better spacing */
   }
 
   .footer__left,
@@ -884,21 +937,44 @@ button {
       justify-content: center; /* Center the content vertically */
       padding: 15px 0;
       width: 100%; /* Ensure the left and right sections are full width */
+      text-align: center; /* Center text on smaller screens */
+      gap: 10px; /* Adds space between each element in the column */
   }
 
   .footer__center {
       padding: 15px 0; /* Adjust padding for better spacing on small screens */
+      display: flex;
+      flex-direction: column; /* Make sure center content is stacked vertically */
+      align-items: center; /* Center the logo horizontally */
+      justify-content: center; /* Center vertically */
+      gap: 10px; /* Adds space around the logo */
   }
 
   .footer__center .logo {
       width: 100px; /* Adjust the logo size for smaller screens */
+      height: auto; /* Maintain aspect ratio */
   }
 
   .footer__copy a {
       font-size: 0.9rem; /* Reduce the font size of links for smaller screens */
   }
+
+  .footer p {
+      font-size: 0.9rem; /* Slightly reduce paragraph text size */
+  }
+
+  /* Adjusting the icon sizes */
+  .footer .fa-envelope,
+  .footer .fa-phone {
+      font-size: 1.2rem; /* Increase icon size on tablets */
+  }
+
+  .footer .fa-whatsapp {
+      font-size: 1.3rem; /* Keep WhatsApp icon at the same size */
+  }
 }
 
+/* Mobile Styles (max-width: 480px) */
 @media (max-width: 480px) {
   .footer {
       padding: 20px 15px; /* Adjust padding for smaller screens */
@@ -908,6 +984,7 @@ button {
       flex-direction: column; /* Stack the footer items vertically */
       align-items: center; /* Center the content horizontally */
       justify-content: center; /* Center the content vertically */
+      padding: 15px 0; /* Added padding for balance */
   }
 
   .footer__left,
@@ -916,14 +993,39 @@ button {
       justify-content: center; /* Center the content vertically */
       width: 100%; /* Ensure full width for smaller screens */
       text-align: center; /* Center the text */
+      gap: 10px; /* Adds space between each element in the column */
+  }
+
+  .footer__center {
+      display: flex;
+      flex-direction: column; /* Stack logo and other content vertically */
+      align-items: center; /* Center content horizontally */
+      justify-content: center; /* Center vertically */
+      gap: 10px; /* Adds space around the logo */
+      padding: 15px 0; /* Adjust padding for better spacing on small screens */
   }
 
   .footer__center .logo {
       width: 90px; /* Further adjust the logo size */
+      height: auto; /* Ensure the logo maintains its aspect ratio */
   }
 
   .footer__copy a {
       font-size: 0.85rem; /* Further reduce font size on very small screens */
+  }
+
+  .footer p {
+      font-size: 0.85rem; /* Reduce font size on very small screens for readability */
+  }
+
+  /* Adjusting the icon sizes for small screens */
+  .footer .fa-envelope,
+  .footer .fa-phone {
+      font-size: 1rem; /* Increase icon size on small screens */
+  }
+
+  .footer .fa-whatsapp {
+      font-size: 1.4rem; /* Make WhatsApp icon a bit larger too */
   }
 }
 

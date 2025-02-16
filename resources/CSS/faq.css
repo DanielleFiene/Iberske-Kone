@@ -199,74 +199,110 @@ button {
 /*=============== HEADER & NAV ===============*/
 /* Navbar container */
 .nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 
 /* Container for logo and text on the left */
 .nav__left {
-    display: flex;
-    align-items: center; /* Centers the logo vertically */
+  display: flex;
+  align-items: center; /* Centers the logo vertically */
 }
 
-/* Styling for logo */
-.nav__logo .logo {
-    width:40px;
-    height: auto;
-    margin-right: 10px;
-    border-radius: 5px;
-}
+
 
 .nav__center {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav__text {
-    font-size: var(--h3-font-size);
-    font-weight: bold;
-    color: var(--text-color);
+  font-size: var(--h3-font-size);
+  font-weight: bold;
+  color: var(--text-color);
 }
 
 /* Styling for the navigation menu */
 .nav__menu {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 /* Styling for the nav list */
 .nav__list {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* Styling for nav items */
 .nav__item {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 /* Styling for nav links */
 .nav__link {
-    text-decoration: none;
-    font-size: var(--h3-font-size);
-    font-weight: bold;
-    color: var(--first-color-alt);
+  text-decoration: none;
+  font-size: var(--h3-font-size);
+  font-weight: bold;
+  color: var(--first-color-alt);
 }
 
 
 /* Active link */
 .nav__link.active-link {
-  border-radius: 5px;
-  font-weight: bold;
-  color: var(--first-color);
-  text-decoration: underline;
+border-radius: 5px;
+font-weight: bold;
+color: var(--first-color);
+text-decoration: underline;
 }
+
+/* Hamburger button for mobile */
+.nav__toggle {
+display: none; /* Hide the hamburger by default */
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+width: 30px;
+height: 25px;
+background: transparent;
+border: none;
+cursor: pointer;
+}
+
+.nav__toggle .bar {
+width: 30px;
+height: 4px;
+background-color: var(--first-color-alt);
+border-radius: 5px;
+}
+
+/* Media Queries for mobile responsiveness */
+@media (max-width: 768px) {
+/* Hide navigation menu by default on small screens */
+.nav__list {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Display the hamburger button */
+.nav__toggle {
+    display: flex;
+}
+
+/* Show navigation menu when the hamburger button is clicked */
+.nav__list.show {
+    display: flex;
+}
+}
+
 
 /* ================Hero Section Styles==================== */
 .hero {
@@ -406,21 +442,38 @@ button {
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.fa-envelope,
-.fa-phone {
-margin-right: 15px;
-font-size: var(--small-font-size);
+.footer .fa-copyright {
+  color: var(--text-color) !important;
 }
 
-.fa-whatsapp {
+.footer .fa-envelope,
+.footer .fa-phone {
+margin-right: 15px;
+font-size: var(--small-font-size);
+color: var(--first-color) !important;
+}
+
+.footer .fa-whatsapp {
 margin-right: 13px;
 font-size: 1.3rem;
+color: var(--first-color) !important;
 }
 
 
 .footer p {
   font-size: var(--smaller-font-size);
 }
+
+.footer a {
+  color: var(--first-color) !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover,
+.footer a:hover i {
+  color: var(--first-color-alt) !important;
+}
+
 
 .footer__info {
   display: flex; /* Makes the container a flexbox */
@@ -460,10 +513,6 @@ border-radius: 8px;
   margin-bottom: 10px; /* Adds some space between copyright and contact details */
 }
 
-.footer__copy a {
-  margin-top: 5px; /* Adds some space between the links */
-}
-
 .footer__right {
   display: flex;
   flex-direction: column; /* Stacks company details vertically */ 
@@ -473,11 +522,7 @@ border-radius: 8px;
 }
 
 .footer__copy a {
-  margin: 0 0 5px 0; /* Adds some margin to space out the links */
-}
-
-/* Style for the links */
-.footer__copy a {
+  margin: 0 0 5px 0;
   text-decoration: none;
   transition: .3s;
 }
@@ -486,11 +531,15 @@ border-radius: 8px;
   text-decoration: underline;
 }
 
+/* =================== MEDIA QUERIES =================== */
+
+/* Tablet Styles (max-width: 768px) */
 @media (max-width: 768px) {
   .footer__info {
       flex-direction: column; /* Stack the footer items vertically */
       align-items: center; /* Ensure content is centered horizontally */
       justify-content: center; /* Center items vertically */
+      padding: 20px 0; /* Added padding for better spacing */
   }
 
   .footer__left,
@@ -499,21 +548,44 @@ border-radius: 8px;
       justify-content: center; /* Center the content vertically */
       padding: 15px 0;
       width: 100%; /* Ensure the left and right sections are full width */
+      text-align: center; /* Center text on smaller screens */
+      gap: 10px; /* Adds space between each element in the column */
   }
 
   .footer__center {
       padding: 15px 0; /* Adjust padding for better spacing on small screens */
+      display: flex;
+      flex-direction: column; /* Make sure center content is stacked vertically */
+      align-items: center; /* Center the logo horizontally */
+      justify-content: center; /* Center vertically */
+      gap: 10px; /* Adds space around the logo */
   }
 
   .footer__center .logo {
       width: 100px; /* Adjust the logo size for smaller screens */
+      height: auto; /* Maintain aspect ratio */
   }
 
   .footer__copy a {
       font-size: 0.9rem; /* Reduce the font size of links for smaller screens */
   }
+
+  .footer p {
+      font-size: 0.9rem; /* Slightly reduce paragraph text size */
+  }
+
+  /* Adjusting the icon sizes */
+  .footer .fa-envelope,
+  .footer .fa-phone {
+      font-size: 1.2rem; /* Increase icon size on tablets */
+  }
+
+  .footer .fa-whatsapp {
+      font-size: 1.3rem; /* Keep WhatsApp icon at the same size */
+  }
 }
 
+/* Mobile Styles (max-width: 480px) */
 @media (max-width: 480px) {
   .footer {
       padding: 20px 15px; /* Adjust padding for smaller screens */
@@ -523,6 +595,7 @@ border-radius: 8px;
       flex-direction: column; /* Stack the footer items vertically */
       align-items: center; /* Center the content horizontally */
       justify-content: center; /* Center the content vertically */
+      padding: 15px 0; /* Added padding for balance */
   }
 
   .footer__left,
@@ -531,16 +604,42 @@ border-radius: 8px;
       justify-content: center; /* Center the content vertically */
       width: 100%; /* Ensure full width for smaller screens */
       text-align: center; /* Center the text */
+      gap: 10px; /* Adds space between each element in the column */
+  }
+
+  .footer__center {
+      display: flex;
+      flex-direction: column; /* Stack logo and other content vertically */
+      align-items: center; /* Center content horizontally */
+      justify-content: center; /* Center vertically */
+      gap: 10px; /* Adds space around the logo */
+      padding: 15px 0; /* Adjust padding for better spacing on small screens */
   }
 
   .footer__center .logo {
       width: 90px; /* Further adjust the logo size */
+      height: auto; /* Ensure the logo maintains its aspect ratio */
   }
 
   .footer__copy a {
       font-size: 0.85rem; /* Further reduce font size on very small screens */
   }
+
+  .footer p {
+      font-size: 0.85rem; /* Reduce font size on very small screens for readability */
+  }
+
+  /* Adjusting the icon sizes for small screens */
+  .footer .fa-envelope,
+  .footer .fa-phone {
+      font-size: 1rem; /* Increase icon size on small screens */
+  }
+
+  .footer .fa-whatsapp {
+      font-size: 1.4rem; /* Make WhatsApp icon a bit larger too */
+  }
 }
+
 
 
 /*=============== SCROLL BAR ===============*/

@@ -18,18 +18,31 @@
 
     <header class="header" id="header">
         <nav class="nav container">
-            <div class="nav__left"></div>
-            <div class="nav__center">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link"><span>Domů</span></a></li>
-                    <li class="nav__item"><a href="pristup.html" class="nav__link"><span>Přístup</span></a></li>
-                    <li class="nav__item"><a href="#kontakt" class="nav__link"><span>Kontakt</span></a></li>
-                    <li class="nav__item"><a href="#podmínky" class="nav__link"><span>Podmínky</span></a></li>
-                </ul>
-            </div>
-            <div class="nav__right"></div>
+          <!-- Left: Logo -->
+          <div class="nav__left">
+            <!-- Logo can go here -->
+          </div>
+      
+          <!-- Center: Navigation Menu -->
+          <div class="nav__center">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="index.html" class="nav__link"><span>Domů</span></a></li>
+              <li class="nav__item"><a href="pristup.html" class="nav__link"><span>Přístup</span></a></li>
+              <li class="nav__item"><a href="kontakt.html" class="nav__link"><span>Kontakt</span></a></li>
+              <li class="nav__item"><a href="#podmínky" class="nav__link"><span>Podmínky</span></a></li>
+            </ul>
+          </div>
+      
+          <!-- Right: Hamburger menu button -->
+          <div class="nav__right">
+            <button class="nav__toggle" id="nav-toggle">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+          </div>
         </nav>
-    </header>
+      </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -57,6 +70,7 @@
             <p><strong>Uchovnění:</strong> <span id="horse-approved"></span></p>
             <p><strong>Má RTG:</strong> <span id="horse-xrays"></span></p>
             <p><strong>Povaha:</strong> <span id="horse-character"></span></p>
+            <p><strong>Okres:</strong> <span id="horse-region"></span></p>
             <p><strong>Úroveň ježdění:</strong> <span id="horse-riding-level"></span></p>
             <p><strong>*</strong> <span id="price-disclaimer">Všichni koně se neustále vyvíjejí ve výcviku a získávají zkušenosti, a proto se jejich cena může postupně upravovat.</span></p>
 
@@ -103,6 +117,7 @@
 
     <!-- JS -->
     <script src="./resources/JS/horse-details.js"></script>
+    <script src="./resources/JS/menuToggle.js"></script>
 </body>
 
 </html>

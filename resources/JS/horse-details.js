@@ -43,6 +43,22 @@ fetch('./resources/horses.json')
         ? '<span style="color: green;">✔</span>' 
         : '<span style="color: red;">✖</span>';
 
+
+      // Fetch owner details based on the ownerID
+      fetch('./resources/owners.json')
+        .then(response => response.json())
+        .then(owners => {
+          const owner = owners.find(o => o.id === horse.ownerID);
+
+          if (owner) {
+            // Render region (owner's region) between x-rays and horse.character
+            document.getElementById('horse-region').textContent = `${owner.region}`;
+          }
+        })
+        .catch(err => {
+          console.error('Error fetching owner data:', err);
+        });
+
       document.getElementById('horse-character').textContent = horse.character;
       document.getElementById('horse-riding-level').textContent = horse.ridingLevel;
 

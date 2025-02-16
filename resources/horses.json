@@ -26,7 +26,7 @@
     },
     {
         "id": 2,
-        "ownerID": 1,
+        "ownerID": 2,
         "publishDate": "18-01-2025",
         "name": "Embasador",
         "fullName": "Embasador XI",
@@ -50,7 +50,7 @@
     },
     {
         "id": 3,
-        "ownerID": 1,
+        "ownerID": 3,
         "publishDate": "06-01-2025",
         "name": "Flurry",
         "fullName": "Flurry de Valencia",
@@ -98,7 +98,7 @@
     },
     {
         "id": 5,
-        "ownerID": 1,
+        "ownerID": 3,
         "publishDate": "10-01-2025",
         "name": "Virrey",
         "fullName": "Virrey Mor",
@@ -122,7 +122,7 @@
     },
     {
         "id": 6,
-        "ownerID": 1,
+        "ownerID": 2,
         "publishDate": "20-01-2025",
         "name": "Cubero",
         "fullName": "Cubero",
@@ -146,12 +146,12 @@
     },
     {
         "id": 7,
-        "ownerID": 1,
+        "ownerID": 2,
         "publishDate": "30-01-2025",
         "name": "Hosco",
         "fullName": "Hosco A",
         "breed": "PRE",
-        "gender": "Hřebec",
+        "gender": "Valach",
         "color": "Palomino",
         "dateOfBirth": "2013-04-18",
         "discipline": ["Drezuru", "Working Equitation"],
@@ -170,7 +170,7 @@
     },
     {
         "id": 8,
-        "ownerID": 1,
+        "ownerID": 2,
         "publishDate": "05-01-2025",
         "name": "Tordita",
         "fullName": "Tordita de Jesus",
@@ -220,7 +220,7 @@
     },
     {
         "id": 10,
-        "ownerID": 1,
+        "ownerID": 3,
         "publishDate": "30-01-2025",
         "name": "Larapio",
         "fullName": "Larapio AMB",
