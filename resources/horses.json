@@ -20,7 +20,7 @@
             "./resources/images/Orador2.PNG"
           ],
         "character": "Klidný a soustředěný, Orador do Luar je spolehlivý a vyrovnaný kůň s vynikajícím pracovním nasazením.",
-        "ridingLevel": "Pokročilý",
+        "ridingLevel": "Obsedaný",
         "genealogyPdf": "./resources/stambomen/APSL_Orador.pdf",
         "video": ""
     },
@@ -44,7 +44,7 @@
             "./resources/images/hero2.jpg"
           ],
         "character": "Embasador je jemný kůň s vynikajícím temperamentem, ideální pro výcvik mladých jezdců.",
-        "ridingLevel": "Středně pokročilý",
+        "ridingLevel": "Mírně pokročilý",
         "genealogyPdf": "",
         "video": ""
     },
@@ -68,7 +68,7 @@
             "./resources/images/hero3.jpeg"
           ],
         "character": "Flurry je energická a hravá, ideální pro rekreační ježdění a méně zkušené jezdce.",
-        "ridingLevel": "Začátečník",
+        "ridingLevel": "Obsedaný",
         "genealogyPdf": "",
         "video": ""
     },
@@ -116,7 +116,7 @@
             "./resources/images/Virrey.jpg"
           ],
         "character": "Virrey Mor je asertivní, ale přístupný, nabízí dobré univerzální schopnosti pro různé disciplíny.",
-        "ridingLevel": "Středně pokročilý",
+        "ridingLevel": "Mírně pokročilý",
         "genealogyPdf": "./resources/stambomen/ANCCE_Virrey.pdf",
         "video": ""
     },
@@ -140,7 +140,7 @@
             "./resources/images/Cubero.jpg"
           ],
         "character": "Cubero je přátelský a uvolněný, skvělý společník pro méně náročné ježdění.",
-        "ridingLevel": "Začátečník",
+        "ridingLevel": "Pokročilý",
         "genealogyPdf": "./resources/stambomen/ANCCE_Cubero.pdf",
         "video": ""
     },
@@ -164,7 +164,7 @@
             "./resources/images/Hosco.jpg"
           ],
         "character": "Hosco A je citlivý a obratný, vyniká jak v drezúře, tak v WE.",
-        "ridingLevel": "Pokročilý",
+        "ridingLevel": "Špičkový",
         "genealogyPdf": "./resources/stambomen/ANCCE_Hosco.pdf",
         "video": ""
     },
@@ -190,7 +190,7 @@
             "./resources/images/Tordita3.jpg"
           ],
         "character": "Tordita je poslušná a ochotná se učit, ideální pro výcvik v WE.",
-        "ridingLevel": "Středně pokročilý",
+        "ridingLevel": "Pokročilý",
         "genealogyPdf": "",
         "video": ""
     },
@@ -214,7 +214,7 @@
             "./resources/images/Paquirri.png"
           ],
         "character": "Paquirri je nadšený a má silnou pracovní morálku, ideální pro závodníky.",
-        "ridingLevel": "Pokročilý",
+        "ridingLevel": "Obsedaný",
         "genealogyPdf": "./resources/stambomen/APSL_Paquirri.pdf",
         "video": ""
     },
@@ -240,7 +240,7 @@
             "./resources/images/Larapio3.jpg"
           ],
         "character": "Larapio je vyrovnaný a silný kůň, ukazující výjimečnou preciznost v drezúře.",
-        "ridingLevel": "Pokročilý",
+        "ridingLevel": "Špičkový",
         "genealogyPdf": "",
         "video": ""
     },
@@ -264,7 +264,7 @@
             "./resources/images/Farruco.jpg"
           ],
         "character": "Farruco je zkušený a stabilní, spolehlivá volba pro pokročilé jezdce hledající konzistenci.",
-        "ridingLevel": "Expert",
+        "ridingLevel": "Špičkový",
         "genealogyPdf": "./resources/stambomen/ANCCE_Farruco.pdf",
         "video": ""
     },
@@ -295,7 +295,7 @@
             "./resources/images/Divino8.jpg"
           ],
         "character": "Divino je zkušený a přizpůsobivý, vyniká v WE s horkým chováním.",
-        "ridingLevel": "Expert",
+        "ridingLevel": "Špičkový",
         "genealogyPdf": "./resources/stambomen/APSL_Divino.pdf",
         "video": "https://www.youtube.com/watch?v=RoE4uK9o7YM"
     }

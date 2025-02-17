@@ -26,7 +26,6 @@ fetch('./resources/horses.json')
       }
 
       document.getElementById('horse-age').textContent = `${calculateAge(horse.dateOfBirth)} let`;
-
       document.getElementById('horse-discipline').textContent = horse.discipline.join(', ');
       document.getElementById('horse-size').textContent = `${horse.size} cm`;
 

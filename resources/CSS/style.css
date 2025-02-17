@@ -556,13 +556,6 @@ button {
   height: 100%;
 }
 
-/* Title for sidebar 
-.sidebar__title {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi-bold);
-  margin: 0;
-}*/
-
 /* ===================== Labels and Fields Row ===================== */
 .filter {
   display: flex;
@@ -601,10 +594,6 @@ button {
 .search-button:hover {
   background-color: var(--first-color-alt);
 }
-
-
-
-
 
 /* ==========================================LANDING PAGE horse cards ==============*/
 .horse-cards {
@@ -668,10 +657,10 @@ button {
     margin-left: 10%;
 }
 
-/* Responsive aanpassingen voor kleinere schermen */
+/* =============media queries ================== */
 @media (max-width: 1024px) {
     .horse-cards {
-        grid-template-columns: 1fr 1fr; /* 2 kolommen op tablet-scherm */
+        grid-template-columns: 1fr 1fr;
     }
 
     .horse-card img {
@@ -681,7 +670,7 @@ button {
 
 @media (max-width: 600px) {
     .horse-cards {
-        grid-template-columns: 1fr; /* 1 kolom op mobiele apparaten */
+        grid-template-columns: 1fr; 
     }
 
     .horse-card img {
@@ -693,30 +682,6 @@ button {
 @media (max-width: 1024px) {
     .sidebar {
         width: 100%;
-    }
-}
-
-
-/* ==========new cards without sidebar============ */
-.horse-cards-no-sidebar {
-    width: 85%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
-    padding: 20px;
-    margin: 0 auto;
-}
-
-/* Responsive small screens */
-@media (max-width: 1024px) {
-    .horse-cards-no-sidebar {
-        grid-template-columns: 1fr 1fr; 
-    }
-}
-
-@media (max-width: 600px) {
-    .horse-cards-no-sidebar {
-        grid-template-columns: 1fr;
     }
 }
 
@@ -807,6 +772,101 @@ button {
   color: hsl(180, 20%, 45%);
 }
 
+/*================ Media queries for the image and text section===============*/
+@media (min-width: 916px) and (max-width: 1600px) {
+  .horse-details {
+    flex-direction: row; /* Keep text and image side by side */
+    align-items: center; /* Align content for balance */
+    justify-content: center; /* Center everything */
+    max-width: 1200px; /* Prevent stretching on large screens */
+    margin: auto; /* Center the section */
+    padding: 40px;
+    gap: 30px;
+  }
+
+  .horse-details__info {
+    flex: 1; /* Allow text to take up available space */
+    max-width: 500px; /* Prevent text from getting too wide */
+  }
+
+  .horse-details__info p {
+    font-size: 1.2rem; /* Slightly larger text for readability */
+  }
+
+  .horse-details__slideshow {
+    flex: 1; /* Allow image section to take up space */
+    max-width: 600px; /* Restrict the image width */
+  }
+
+  .horse-details__slideshow img {
+    max-width: 100%;
+    max-height: 500px; /* Keep images under control */
+    object-fit: cover; /* Ensure images look good */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 915px) {
+  .horse-details {
+    flex-direction: column; /* Stack everything vertically */
+    align-items: center; /* Center align content */
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .horse-details__info {
+    max-width: 90%; /* Let text take up more space */
+    text-align: center; /* Center text for better readability */
+  }
+
+  .horse-details__info p {
+    font-size: 1.1rem; /* Slightly smaller font for better fit */
+  }
+
+  .horse-details__slideshow {
+    max-width: 90%; /* Reduce slideshow size */
+  }
+
+  .horse-details__slideshow img {
+    max-width: 100%;
+    max-height: 400px; /* Keep images smaller */
+  }
+
+  /* Adjust slideshow buttons if needed */
+  #prev-slide,
+  #next-slide {
+    font-size: 40px;
+    padding: 8px 12px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .horse-details {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    align-items: center; /* Center align the items */
+    padding: 20px;
+  }
+
+  .horse-details__info {
+    max-width: 100%; /* Allow text section to take full width */
+    text-align: center; /* Center text for better readability */
+  }
+
+  .horse-details__info p {
+    font-size: 1rem; /* Reduce font size for better mobile experience */
+  }
+
+  .horse-details__slideshow {
+    max-width: 100%; /* Make the slideshow fit the screen */
+  }
+
+  .horse-details__slideshow img {
+    max-width: 100%; /* Ensure images scale properly */
+    margin-right: 0; /* Remove extra margin for better centering */
+    max-height: 500px;
+  }
+}
+
 /*=================video section========================*/
 .horse-details__video {
   padding: 30px;
@@ -818,9 +878,24 @@ button {
   flex-wrap: wrap;
 }
 
+/*===========responsive styles for the videos============*/
+@media (max-width: 768px) {
+  .horse-details__video {
+    flex-direction: column; /* Stack videos vertically on smaller screens */
+    align-items: center; /* Center align items for better look */
+  }
 
+  .horse-details__video iframe,
+  .horse-details__video img {
+    max-width: 90%; /* Reduce size of videos and preview images */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .horse-details__video img {
+    max-width: 70%; /* Make preview images smaller */
+  }
+}
 
-/*=============== CONTACT ===============*/
 
 
 /*=============== FOOTER ===============*/
