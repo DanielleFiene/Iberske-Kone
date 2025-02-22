@@ -158,23 +158,24 @@ function filterHorses() {
           isSizeMatch = parseFloat(horse.size) >= 170;
       }
 
-      // Price filtering logic
-      let isPriceMatch = false;
-      if (priceFilter === 'all') {
-          isPriceMatch = true; // No price filter applied
-      } else if (priceFilter === 'below-5000') {
-          isPriceMatch = parseInt(horse.price.replace('€', '').replace(',', '')) <= 5000;
-      } else if (priceFilter === '5000-10000') {
-          isPriceMatch = parseInt(horse.price.replace('€', '').replace(',', '')) >= 5000 && parseInt(horse.price.replace('€', '').replace(',', '')) <= 10000;
-      } else if (priceFilter === '10000-15000') {
-          isPriceMatch = parseInt(horse.price.replace('€', '').replace(',', '')) >= 10000 && parseInt(horse.price.replace('€', '').replace(',', '')) <= 15000;
-      } else if (priceFilter === '15000-25000') {
-          isPriceMatch = parseInt(horse.price.replace('€', '').replace(',', '')) >= 15000 && parseInt(horse.price.replace('€', '').replace(',', '')) <= 25000;
-      } else if (priceFilter === 'above-25000') {
-          isPriceMatch = parseInt(horse.price.replace('€', '').replace(',', '')) >= 25000;
-      } else if (priceFilter === 'on-request') {
-          isPriceMatch = horse.price === 'Na dotaz';
-      }
+// Price filtering logic
+let isPriceMatch = false;
+
+if (priceFilter === 'all') {
+    isPriceMatch = true; // No price filter applied
+} else if (priceFilter === 'below-5000') {
+    isPriceMatch = horse.price <= 5000;
+} else if (priceFilter === '5000-10000') {
+    isPriceMatch = horse.price >= 5000 && horse.price <= 10000;
+} else if (priceFilter === '10000-15000') {
+    isPriceMatch = horse.price >= 10000 && horse.price <= 15000;
+} else if (priceFilter === '15000-25000') {
+    isPriceMatch = horse.price >= 15000 && horse.price <= 25000;
+} else if (priceFilter === 'above-25000') {
+    isPriceMatch = horse.price >= 25000;
+} else if (priceFilter === 'on-request') {
+    isPriceMatch = horse.price === 'Na dotaz'; // This works if 'Na dotaz' is a string in your data
+}
 
       // Gender filtering logic
       let isGenderMatch = false;
