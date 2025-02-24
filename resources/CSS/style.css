@@ -294,10 +294,20 @@ button {
   .nav__toggle {
       display: flex;
   }
-
+  .nav__item {
+    padding: 5px;
+  }
   /* Show navigation menu when the hamburger button is clicked */
   .nav__list.show {
       display: flex;
+  }
+
+  .nav__right {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 20px;
   }
 }
 
@@ -540,6 +550,11 @@ button {
 }
 
 /* ===================== Labels and Fields Row ===================== */
+.sidebar-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .sidebar {
   margin: 0 auto;
   width: 80%;
@@ -594,6 +609,38 @@ button {
 .search-button:hover {
   background-color: var(--first-color-alt);
 }
+
+/*=======================responsive styles============*/
+@media (min-width: 900px) and (max-width: 1700px) {
+  .sidebar-container {
+    width: 70%;
+  }
+
+  .sidebar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .search-button {
+    padding: 15px 5px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 899px) {
+  .sidebar-container {
+    width: 70%;
+  }
+
+  .sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-button {
+    padding: 15px 5px;
+  }
+}
+
 
 /* ==========================================LANDING PAGE horse cards ==============*/
 .horse-cards {
