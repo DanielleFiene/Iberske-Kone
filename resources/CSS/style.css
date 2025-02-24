@@ -294,20 +294,10 @@ button {
   .nav__toggle {
       display: flex;
   }
-  .nav__item {
-    padding: 5px;
-  }
   /* Show navigation menu when the hamburger button is clicked */
   .nav__list.show {
       display: flex;
-  }
-
-  .nav__right {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    position: absolute;
-    top: 20px;
+      margin-top: 10px;
   }
 }
 

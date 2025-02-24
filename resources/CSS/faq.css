@@ -284,23 +284,23 @@ border-radius: 5px;
 
 /* Media Queries for mobile responsiveness */
 @media (max-width: 768px) {
-/* Hide navigation menu by default on small screens */
-.nav__list {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    text-align: center;
-}
+  /* Hide navigation menu by default on small screens */
+  .nav__list {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+  }
 
-/* Display the hamburger button */
-.nav__toggle {
-    display: flex;
-}
-
-/* Show navigation menu when the hamburger button is clicked */
-.nav__list.show {
-    display: flex;
-}
+  /* Display the hamburger button */
+  .nav__toggle {
+      display: flex;
+  }
+  /* Show navigation menu when the hamburger button is clicked */
+  .nav__list.show {
+      display: flex;
+      margin-top: 10px;
+  }
 }
 
 
