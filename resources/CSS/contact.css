@@ -463,6 +463,7 @@ img {
   .contact {
       height: auto; /* Allow contact card to grow vertically */
       margin-top: 20px; /* Add some margin at the top */
+      padding: 20px;
   }
 
   .contact-box {
@@ -476,6 +477,10 @@ img {
 
   .contact p, a, i {
       font-size: 1rem; /* Slightly reduce font size for tablets */
+  }
+
+  .contact-details {
+    margin-bottom: 25px;
   }
 
   .contact h2, .contact h4 {
