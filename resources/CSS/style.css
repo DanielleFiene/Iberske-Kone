@@ -641,6 +641,20 @@ button {
   }
 }
 
+@media (max-width: 420px) {
+  .sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 10px; /* Optional spacing */
+  }
+
+  #search-button {
+    grid-column: span 2;
+    padding: 10px;
+    margin: 0 auto;
+  }
+}
+
 
 /* ==========================================LANDING PAGE horse cards ==============*/
 .horse-cards {
