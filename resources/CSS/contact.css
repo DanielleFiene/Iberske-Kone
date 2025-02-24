@@ -467,16 +467,16 @@ img {
   }
 
   .contact-box {
-      width: 80%; /* Make the contact box take more width on smaller screens */
-      height: auto; /* Allow it to adjust dynamically */
+      width: 80%; 
+      height: auto;
   }
 
   img {
-      width: 130px; /* Reduce image size */
+      width: 130px; 
   }
 
   .contact p, a, i {
-      font-size: 1rem; /* Slightly reduce font size for tablets */
+      font-size: 1rem;
   }
 
   .contact-details {
@@ -484,8 +484,8 @@ img {
   }
 
   .contact h2, .contact h4 {
-      font-size: 1.75rem; /* Adjust heading sizes for tablet */
-      margin-bottom: 1rem; /* More space between headings */
+      font-size: 1.75rem; 
+      margin-bottom: 1rem;
   }
 }
 
