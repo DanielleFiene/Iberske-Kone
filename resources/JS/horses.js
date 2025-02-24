@@ -38,6 +38,7 @@ function renderHorseCards(horses) {
 
     // Create the image element
     const horseImage = document.createElement('img');
+    horseImage.setAttribute('loading', 'lazy');
     horseImage.src = horse.image;
     horseImage.alt = horse.name;
 
