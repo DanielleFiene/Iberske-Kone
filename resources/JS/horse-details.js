@@ -82,6 +82,12 @@ fetch('./resources/horses.json')
       let currentSlide = 0;
       const slideshowElement = document.getElementById('horse-slideshow');
 
+      // Hide navigation buttons if there's only one image
+      if (slideshowImages.length <= 1) {
+        document.getElementById('prev-slide').style.display = 'none';
+        document.getElementById('next-slide').style.display = 'none';
+      }
+
       function updateSlide() {
         slideshowElement.src = slideshowImages[currentSlide];
       }
